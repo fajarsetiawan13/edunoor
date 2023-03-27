@@ -33,7 +33,7 @@
 
     .table :where(thead, tbody) :where(td) {
         --tw-bg-opacity: 1;
-        background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+        /* background-color: rgb(248 250 252 / var(--tw-bg-opacity)); */
     }
 }
 
@@ -46,6 +46,6 @@
 
     .table :where(thead, tbody) :where(td) {
         --tw-bg-opacity: 1;
-        background-color: rgb(248 250 252 / var(--tw-bg-opacity));
+        /* background-color: rgb(248 250 252 / var(--tw-bg-opacity)); */
     }
 }

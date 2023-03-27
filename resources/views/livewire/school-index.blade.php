@@ -20,7 +20,7 @@
             <option value="10">10</option>
             <option value="20">20</option>
         </select>
-        <select wire:model='filter' class="select select-sm select-bordered w-full max-w-[75px] md:select-md">
+        <select wire:model='filter' class="select select-sm select-bordered w-full max-w-[100px] md:select-md">
             <option value="SD" selected>SD</option>
             <option value="SMP">SMP</option>
             <option value="SMA">SMA</option>

@@ -194,34 +194,33 @@ class DatabaseSeeder extends Seeder
             'kurikulum' => 'Kurikulum 2013',
         ]);
 
-        Questionnaire::create(['question' => 'Berapa luas sekolah?']);
-        Questionnaire::create(['question' => 'Berapa luas ruang terbukanya?']);
-        Questionnaire::create(['question' => 'Berapa jumlah kelasnya?']);
-        Questionnaire::create(['question' => 'Berapa luasan setiap kelasnya?']);
-        Questionnaire::create(['question' => 'Berapa jumlah guru?']);
-        Questionnaire::create(['question' => 'Berapa jumlah siswa?']);
-        Questionnaire::create(['question' => 'Berapa jumlah tenaga administrasi?']);
-        Questionnaire::create(['question' => 'Ada berapa jumlah ventilasi di setiap kelas?']);
-        Questionnaire::create(['question' => 'Berapa jumlah toilet dalam lingkungan sekolah?']);
-        Questionnaire::create(['question' => 'Apakah air di toilet sekolah selalu tersedia dan lancar?']);
-        Questionnaire::create(['question' => 'Apakah tersedia sabun cuci tangan di setiap toilet?']);
-        Questionnaire::create(['question' => 'Apakah toilet selalu dibersihkan menggunakan disinfektan?']);
-        Questionnaire::create(['question' => 'Apakah tersedia tempat cuci tangan di setiap depan kelas?']);
-        Questionnaire::create(['question' => 'Apakah tersedia <em>hand sanitizer</em> yang cukup di sekolah?']);
-        Questionnaire::create(['question' => 'Apakah di setiap teras sekolah tersedia <em> hand sanitizer</em>?']);
-        Questionnaire::create(['question' => 'Apakah sekolah menggunakan thermo gun untuk mengukur suhu tubuh guru, karyawan, dan siswa?']);
-        Questionnaire::create(['question' => 'Bagaimana ketaatan penggunaan masker di sekolah?']);
-        Questionnaire::create(['question' => 'Apakah sekolah selalu menyediakan masker bagi yang terlupa memakainya dari rumah?']);
-        Questionnaire::create(['question' => 'Apakah dilakukan sosialisasi untuk penerapan protokol kesehatan Covid-19?']);
-        Questionnaire::create(['question' => 'Apakah tersedia media informasi, komunikasi, dan edukasi terhadap penerapan protokol kesehatan Covid-19?]']);
-        Questionnaire::create(['question' => 'Apakah terdapat Covid-19 selama setahun terakhir?']);
-        Questionnaire::create(['question' => 'Jika ada yang terkena Covid-19, berapa jumlahnya dan bagaimana sebaran per bulannya?']);
-        Questionnaire::create(['question' => 'Apakah terjadi pemusatan pada kelas tertentu ketika ada yang terkena Covid-19?']);
-        Questionnaire::create(['question' => 'Apakah ada satgas Covid-19 di sekolah?']);
-        Questionnaire::create(['question' => 'Jika ada warga sekolah yang terkena Covid-19 bagaimana prosedur penanganannya?']);
-        Questionnaire::create(['question' => 'Apakah dibuat peraturan/tata-tertib tentang Covid-19 di sekolah?']);
-        Questionnaire::create(['question' => 'Apakah sekolah menerapkan kantin sehat?']);
-        Questionnaire::create(['question' => 'Informasi Tambahan']);
+        Questionnaire::create(['question' => 'Ketersediaan Tempat Cuci Tangan']);
+        Questionnaire::create(['question' => 'Ketersediaan Sabun Cuci Tangan']);
+        Questionnaire::create(['question' => 'Ketersediaan Air Mengalir']);
+        Questionnaire::create(['question' => 'Ketersediaan Handsanitizer']);
+        Questionnaire::create(['question' => 'Ketersediaan Masker']);
+        Questionnaire::create(['question' => 'Ketaatan Penggunaan Masker']);
+        Questionnaire::create(['question' => 'Ketersediaan Thermogun']);
+
+        Questionnaire::create(['question' => 'Jumlah Guru']);
+        Questionnaire::create(['question' => 'Jumlah Siswa']);
+        Questionnaire::create(['question' => 'Jumlah Kelas']);
+        Questionnaire::create(['question' => 'Jumlah Tenaga Kependidikan']);
+
+        Questionnaire::create(['question' => 'Luas Sekolah']);
+        Questionnaire::create(['question' => 'Luas Ruang Terbuka']);
+        Questionnaire::create(['question' => 'Ketersediaan Ventilasi']);
+
+        Questionnaire::create(['question' => 'Ketersediaan Satgas Covid-19']);
+        Questionnaire::create(['question' => 'Ketersediaan Protokol Kesehatan']);
+        Questionnaire::create(['question' => 'Ketersediaan Prosedur Penanganan Covid-19']);
+        Questionnaire::create(['question' => 'Ketersediaan media informasi Covid-19']);
+
+        Questionnaire::create(['question' => 'Jumlah data Covid-19 per minggu']);
+        Questionnaire::create(['question' => 'Jumlah kontak erat']);
+        Questionnaire::create(['question' => 'Waktu terakhir kontak erat']);
+        Questionnaire::create(['question' => 'Gejala kontak erat']);
+        Questionnaire::create(['question' => 'Waktu terjadi gejala kasus']);
 
         Articles::create([
             'user_id' => 1, 'title' => 'artikel pertama', 'slug' => 'artikel-pertama',

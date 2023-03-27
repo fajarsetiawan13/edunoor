@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Infrastructure;
 use App\Models\Questionnaire;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -11,6 +12,7 @@ class QuestionareIndex extends Component
     use WithPagination;
     public $paginate = 10;
     public $search;
+    public $filter;
 
     protected $updatesQueryString = ['search'];
 
@@ -26,23 +28,24 @@ class QuestionareIndex extends Component
 
     public function render()
     {
+        // dd(Infrastructure::with('school.qr')->get());
         return view('livewire.questionare-index', [
-            'question' => $this->search === null ?
-                Questionnaire::paginate($this->paginate) :
-                Questionnaire::where('question', 'like', '%' . $this->search . '%')->paginate($this->paginate)
+            'questionnaire' => $this->search === null ?
+                Infrastructure::OrderBy('date_created')->OrWhere('school_bp', 'like', '%' . $this->filter)->paginate($this->paginate) :
+                Infrastructure::OrderBy('date_created')->OrWhere('school_bp', 'like', '%' . $this->filter)->where('school_id', 'like', '%' . $this->search . '%')->paginate($this->paginate)
         ]);
     }
 
     public function getQuestion($id)
     {
-        $question = Questionnaire::find($id);
+        $question = Infrastructure::find($id);
         $this->emit('getQuestion', $question);
     }
 
     public function destroy($id)
     {
         if ($id) {
-            $data = Questionnaire::find($id);
+            $data = Infrastructure::find($id);
             $data->delete();
             session()->flash('success', 'Pertanyaan berhasil dihapus.');
         }

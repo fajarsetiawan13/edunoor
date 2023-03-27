@@ -3,7 +3,7 @@
 @section('section')
 
 <section id="dashboard" class="py-16">
-    <div class="container flex justify-center mx-auto px-4 py-4 md:flex-row">
+    <div class="container flex flex-col justify-center gap-3 mx-auto px-4 py-4 md:flex-row">
         <div class="card w-full bg-base-100 shadow-lg md:w-2/3">
             <div class="card-body">
                 <h2 class="card-title">{{ $title }}</h2>
@@ -34,6 +34,20 @@
                 </div>
             </div>
         </div>
+        {{-- <div class="card w-full bg-base-100 shadow-lg md:w-1/3">
+            <div class="card-body">
+                <h2 class="card-title">{{ $title }}</h2>
+                <div class="divider my-0"></div>
+                <div class="tabs flex justify-center my-6">
+                    <a id="select-tab" class="tab tab-lifted">Luas Sekolah</a> 
+                    <a id="select-tab" class="tab tab-lifted">Ruang Terbuka</a> 
+                    <a id="select-tab" class="tab tab-lifted">Kepadatan Siswa</a>
+                    <a id="select-tab" class="tab tab-lifted">Ventilasi</a>
+                    <a id="select-tab" class="tab tab-lifted">Toilet</a>
+                    <a id="select-tab" class="tab tab-lifted">Lain-lain</a>
+                </div>
+            </div>
+        </div> --}}
     </div>
 </section>
 

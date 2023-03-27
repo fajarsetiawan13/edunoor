@@ -32,9 +32,11 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('aut
 Route::get('/dashboard/users', [DashboardController::class, 'users'])->middleware('auth');
 Route::get('/dashboard/schools', [SchoolController::class, 'index'])->middleware('auth');
 Route::get('/dashboard/schools/{id}', [SchoolController::class, 'school_profile'])->middleware('auth');
-Route::get('/dashboard/questionare', [DashboardController::class, 'questionare'])->middleware('auth');
+Route::get('/dashboard/questionare', [SchoolController::class, 'questionare'])->middleware('auth');
 Route::get('/setting', [DashboardController::class, 'setting'])->middleware('auth');
 Route::get('/check/slug', [DashboardController::class, 'check_slug'])->middleware('auth');
+Route::post('/setting', [DashboardController::class, 'setting_store']);
+Route::put('/setting', [DashboardController::class, 'setting_update']);
 
 Route::resource('/dashboard/articles', ArticlesController::class);
 
@@ -44,7 +46,7 @@ Route::get('/gen-qr-school/{school}', [QRCodesController::class, 'gen_school'])-
 Route::get('/gen-qr-students/{school}', [QRCodesController::class, 'gen_students'])->middleware('auth');
 Route::get('/sch/{school}', [SchoolController::class, 'show_school']);
 Route::get('/std/{student}', [SchoolController::class, 'show_student']);
-Route::post('/sch-infrastructure', [SchoolController::class, 'sch_infrastructure']);
-Route::put('/sch-infrastructure', [SchoolController::class, 'sch_infrastructure_change']);
+Route::get('/sch/{school}/edit', [SchoolController::class, 'edit_infrastructure']);
+Route::put('/sch/{school}', [SchoolController::class, 'change_infrastructure']);
 
 // STAT ROUTES

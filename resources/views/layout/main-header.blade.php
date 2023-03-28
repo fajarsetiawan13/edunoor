@@ -5,6 +5,7 @@
             <div class="flex justify-center items-center h-full">
                 <div class="text-slate-800 px-6 md:px-12">
                     <h1 class="text-3xl font-bold md:text-center">EDUNOOR</h1>
+                    <p>Sistem Informasi Manajemen Monitoring Sarana dan Prasarana Kesehatan Sekolah</p>
                 </div>
             </div>
         </div>

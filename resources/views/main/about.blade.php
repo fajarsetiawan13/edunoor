@@ -46,12 +46,19 @@
 @endif
 
 <section id="hero">
-    <div class="hero min-h-screen" style="background-image: url('https://picsum.photos/640/360');">
+    <div class="hero min-h-screen" style="background-image: url('{{ asset('/img/unair-1.jpg') }}');">
         <div class="hero-overlay bg-opacity-60"></div>
-        <div class="block hero-content text-center text-neutral-content">
-            <h1 class="max-w-xl mb-5 text-3xl lg:text-5xl text-slate-50 font-bold">{{ $title }}</h1>
-            <p class="max-w-xl mb-5 text-slate-50">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis
-                sunt error maiores ab eum consectetur veniam molestias doloremque maxime necessitatibus?</p>
+        <div class=" lex justify-items-center hero-content text-neutral-content">
+            <div class="card w-96 bg-base-100 shadow-xl">
+                <figure class="px-10 pt-10">
+                  <img src="{{ asset('/img/default.webp') }}" alt="Image" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                  <h2 class="card-title text-slate-800 text-center">NAJLA SALSABILA NOOR</h2>
+                  <p class="text-slate-800 text-center">IMAHASISWA S-2 PASCASARJANA ILMU KESEHATAN MASYARAKAT</p>
+                  <p class="text-slate-800 text-center">UNIVERSITAS AIRLANGGA</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>

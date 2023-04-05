@@ -80,7 +80,7 @@
                 <div class="flex flex-col gap-2">
                     <span class="text-sm font-bold text-center">Generate QR Code</span>
                     <a href="/gen-qr-school/{{ $school[0]->id }}" class="btn btn-sm btn-primary self-center text-white text-sm w-2/3" onclick="return confirm('Generate QR Code?')">For School</a>
-                    <a href="/gen-qr-students/{{ $school[0]->id }}" class="btn btn-sm btn-info self-center text-white text-sm w-2/3" onclick="return confirm('Generate QR Code?')">For All Students</a>
+                    {{-- <a href="/gen-qr-students/{{ $school[0]->id }}" class="btn btn-sm btn-info self-center text-white text-sm w-2/3" onclick="return confirm('Generate QR Code?')">For All Students</a> --}}
                 </div>
                 <div class="divider my-0"></div>
                 <div class="card flex flex-row align-items-center self-center w-[300px] h-[200px] rounded-none" id="school-card" style="background-image: url('/img/card-school.webp');">

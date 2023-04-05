@@ -4,8 +4,8 @@
         <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed" style="background-color: rgba(0, 0, 0, 0.1)">
             <div class="flex justify-center items-center h-full">
                 <div class="text-slate-800 px-6 md:px-12">
-                    <h1 class="text-3xl font-bold md:text-center">EDUNOOR</h1>
-                    <p>Sistem Informasi Manajemen Monitoring Sarana dan Prasarana Kesehatan Sekolah</p>
+                    <h1 class="text-3xl font-bold md:text-center">SIDIKA</h1>
+                    <p>Sistem Informasi Data Kesehatan Sekolah</p>
                 </div>
             </div>
         </div>

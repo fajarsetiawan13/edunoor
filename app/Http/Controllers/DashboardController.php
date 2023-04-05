@@ -13,7 +13,7 @@ class DashboardController extends Controller
     public function index()
     {
         return view('dashboard.index', [
-            'title' => 'DASHBOARD',
+            'title' => 'Dashboard',
             'account' => User::where('id', auth()->user()->id),
         ]);
     }
@@ -21,7 +21,7 @@ class DashboardController extends Controller
     public function users()
     {
         return view('dashboard.users', [
-            'title' => 'DAFTAR PENGGUNA SISTEM',
+            'title' => 'Daftar Pengguna Sistem',
             'account' => User::where('id', auth()->user()->id),
         ]);
     }

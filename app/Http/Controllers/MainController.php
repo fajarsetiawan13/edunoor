@@ -46,67 +46,79 @@ class MainController extends Controller
     {
         // dd(Infrastructure::KepadatanSMP());
         $data = [
+            Infrastructure::LuasSekolahSD()->values(),
+            Infrastructure::LuasSekolahSMP()->values(),
+            Infrastructure::LuasSekolahSMA()->values(),
+            Infrastructure::RuangTerbukaSekolahSD()->values(),
+            Infrastructure::RuangTerbukaSekolahSMP()->values(),
+            Infrastructure::RuangTerbukaSekolahSMA()->values(),
+            Infrastructure::RuangKelasSD()->values(),
+            Infrastructure::RuangKelasSMP()->values(),
+            Infrastructure::RuangKelasSMA()->values(),
+            Infrastructure::LuasKelasSD()->values(),
+            Infrastructure::LuasKelasSMP()->values(),
+            Infrastructure::LuasKelasSMA()->values(),
+            Infrastructure::VentilasiKelasSD()->values(),
+            Infrastructure::VentilasiKelasSMP()->values(),
+            Infrastructure::VentilasiKelasSMA()->values(),
             Infrastructure::KepadatanSD()->values(),
             Infrastructure::KepadatanSMP()->values(),
             Infrastructure::KepadatanSMA()->values(),
         ];
         $labels = [
+            Infrastructure::LuasSekolahSD()->keys(),
+            Infrastructure::LuasSekolahSMP()->keys(),
+            Infrastructure::LuasSekolahSMA()->keys(),
+            Infrastructure::RuangTerbukaSekolahSD()->keys(),
+            Infrastructure::RuangTerbukaSekolahSMP()->keys(),
+            Infrastructure::RuangTerbukaSekolahSMA()->keys(),
+            Infrastructure::RuangKelasSD()->keys(),
+            Infrastructure::RuangKelasSMP()->keys(),
+            Infrastructure::RuangKelasSMA()->keys(),
+            Infrastructure::LuasKelasSD()->keys(),
+            Infrastructure::LuasKelasSMP()->keys(),
+            Infrastructure::LuasKelasSMA()->keys(),
+            Infrastructure::VentilasiKelasSD()->keys(),
+            Infrastructure::VentilasiKelasSMP()->keys(),
+            Infrastructure::VentilasiKelasSMA()->keys(),
             Infrastructure::KepadatanSD()->keys(),
             Infrastructure::KepadatanSMP()->keys(),
             Infrastructure::KepadatanSMA()->keys(),
         ];
         for ($i = 0; $i < count($data[0]); $i++) {
-            $batas_SD[$i] = 24;
+            $batas_SD[$i] = 28;
         }
         for ($i = 0; $i < count($data[1]); $i++) {
-            $batas_SMP[$i] = 33;
+            $batas_SMP[$i] = 32;
         }
         for ($i = 0; $i < count($data[2]); $i++) {
             $batas_SMA[$i] = 36;
         }
-
+        
         return view('main.statistics', [
             'title' => 'Statistik Data Kesehatan Sekolah | Sistem Basis Data Sekolah',
             'setting' => Setting::all(),
-            'labels_kepadatan_siswa_SD' => $labels[0], 'data_SD' => $data[0], 'batas_SD' => $batas_SD,
-            'labels_kepadatan_siswa_SMP' => $labels[1], 'data_SMP' => $data[1], 'batas_SMP' => $batas_SMP,
-            'labels_kepadatan_siswa_SMA' => $labels[2], 'data_SMA' => $data[2], 'batas_SMA' => $batas_SMA,
-            'ventilasi_SD' => Infrastructure::VentilasiSD()->get(),
-            'ventilasi_SMP' => Infrastructure::VentilasiSMP()->get(),
-            'ventilasi_SMA' => Infrastructure::VentilasiSMA()->get(),
-            'tempat_cuci_tangan_SD' => Infrastructure::TempatCuciTanganSD()->get(),
-            'tempat_cuci_tangan_SMP' => Infrastructure::TempatCuciTanganSMP()->get(),
-            'tempat_cuci_tangan_SMA' => Infrastructure::TempatCuciTanganSMA()->get(),
-            'sabun_cuci_tangan_SD' => Infrastructure::SabunCuciTanganSD()->get(),
-            'sabun_cuci_tangan_SMP' => Infrastructure::SabunCuciTanganSMP()->get(),
-            'sabun_cuci_tangan_SMA' => Infrastructure::SabunCuciTanganSMA()->get(),
-            'air_toilet_SD' => Infrastructure::AirToiletSD()->get(),
-            'air_toilet_SMP' => Infrastructure::AirToiletSMP()->get(),
-            'air_toilet_SMA' => Infrastructure::AirToiletSMA()->get(),
-            'handsanitizer_SD' => Infrastructure::HandsanitizerSD()->get(),
-            'handsanitizer_SMP' => Infrastructure::HandsanitizerSMP()->get(),
-            'handsanitizer_SMA' => Infrastructure::HandsanitizerSMA()->get(),
-            'masker_SD' => Infrastructure::MaskerSD()->get(),
-            'masker_SMP' => Infrastructure::MaskerSMP()->get(),
-            'masker_SMA' => Infrastructure::MaskerSMA()->get(),
-            'ketaatan_masker_SD' => Infrastructure::KetaatanMaskerSD()->get(),
-            'ketaatan_masker_SMP' => Infrastructure::KetaatanMaskerSMP()->get(),
-            'ketaatan_masker_SMA' => Infrastructure::KetaatanMaskerSMA()->get(),
-            'thermogun_SD' => Infrastructure::ThermogunSD()->get(),
-            'thermogun_SMP' => Infrastructure::ThermogunSMP()->get(),
-            'thermogun_SMA' => Infrastructure::ThermogunSMA()->get(),
-            'satgas_covid_SD' => Infrastructure::SatgasCovidSD()->get(),
-            'satgas_covid_SMP' => Infrastructure::SatgasCovidSMP()->get(),
-            'satgas_covid_SMA' => Infrastructure::SatgasCovidSMA()->get(),
-            'protokol_kesehatan_SD' => Infrastructure::ProtokolKesehatanSD()->get(),
-            'protokol_kesehatan_SMP' => Infrastructure::ProtokolKesehatanSMP()->get(),
-            'protokol_kesehatan_SMA' => Infrastructure::ProtokolKesehatanSMA()->get(),
-            'prosedur_covid_SD' => Infrastructure::ProsedurCovidSD()->get(),
-            'prosedur_covid_SMP' => Infrastructure::ProsedurCovidSMP()->get(),
-            'prosedur_covid_SMA' => Infrastructure::ProsedurCovidSMA()->get(),
-            'media_informasi_SD' => Infrastructure::MediaInformasiSD()->get(),
-            'media_informasi_SMP' => Infrastructure::MediaInformasiSMP()->get(),
-            'media_informasi_SMA' => Infrastructure::MediaInformasiSMA()->get(),
+            'labels_luas_sekolah_SD' => $labels[0], 'luas_SD' => $data[0],
+            'labels_luas_sekolah_SMP' => $labels[1], 'luas_SMP' => $data[1],
+            'labels_luas_sekolah_SMA' => $labels[2], 'luas_SMA' => $data[2],
+            'labels_ruang_terbuka_SD' => $labels[3], 'ruang_terbuka_SD' => $data[3],
+            'labels_ruang_terbuka_SMP' => $labels[4], 'ruang_terbuka_SMP' => $data[4],
+            'labels_ruang_terbuka_SMA' => $labels[5], 'ruang_terbuka_SMA' => $data[5],
+            'labels_ruang_kelas_SD' => $labels[6], 'ruang_kelas_SD' => $data[6],
+            'labels_ruang_kelas_SMP' => $labels[7], 'ruang_kelas_SMP' => $data[7],
+            'labels_ruang_kelas_SMA' => $labels[8], 'ruang_kelas_SMA' => $data[8],
+            'labels_luas_kelas_SD' => $labels[9], 'luas_kelas_SD' => $data[9],
+            'labels_luas_kelas_SMP' => $labels[10], 'luas_kelas_SMP' => $data[10],
+            'labels_luas_kelas_SMA' => $labels[11], 'luas_kelas_SMA' => $data[11],
+            'labels_ventilasi_kelas_SD' => $labels[12], 'ventilasi_kelas_SD' => $data[12],
+            'labels_ventilasi_kelas_SMP' => $labels[13], 'ventilasi_kelas_SMP' => $data[13],
+            'labels_ventilasi_kelas_SMA' => $labels[14], 'ventilasi_kelas_SMA' => $data[14],
+            'basis_data_sd' => Infrastructure::Basis_Data_SD()->get(),
+            'basis_data_smp' => Infrastructure::Basis_Data_SMP()->get(),
+            'basis_data_sma' => Infrastructure::Basis_Data_SMA()->get(),
+            'labels_kepadatan_SD' => $labels[15], 'kepadatan_SD' => $data[15], 'batas_SD' => $batas_SD,
+            'labels_kepadatan_SMP' => $labels[16], 'kepadatan_SMP' => $data[16], 'batas_SMP' => $batas_SMP,
+            'labels_kepadatan_SMA' => $labels[17], 'kepadatan_SMA' => $data[17], 'batas_SMA' => $batas_SMA,
         ]);
     }
 

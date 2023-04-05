@@ -34,7 +34,7 @@ class StudentsCard extends Component
             }
         }
         foreach ($qr_codes as $qr) {
-            if ($qr->student_id == $student['id']) {
+            if ($qr->school_id == $student['school_id']) {
                 $this->qr_image = $qr->qr_image;
             }
         }

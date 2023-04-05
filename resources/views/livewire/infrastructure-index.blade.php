@@ -14,7 +14,7 @@
     
     @if(!empty($infrastructure->count()))
     <table class="table table-fixed mb-3">
-        <thead><tr><th colspan="2">Data Sekolah</th></tr></thead>
+        <thead><tr><th colspan="2">Profil Sekolah</th></tr></thead>
         <tbody>
             <tr class="hover">
                 <td class="w-[20%] text-left align-middle">Nama Sekolah</td>
@@ -31,7 +31,7 @@
         </tbody>
     </table>
     <table class="table table-fixed mb-3">
-        <thead><tr><th colspan="4">Sarana Sanitasi</th></tr></thead>
+        <thead><tr><th colspan="4">Fasilitas Sekolah</th></tr></thead>
         <tbody>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">No</td>
@@ -69,18 +69,6 @@
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->A5 == null) ? '-' : $infrastructure[0]->A5 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_A5 == null) ? '-' : $infrastructure[0]->explanation_A5 }}</td>
             </tr>
-            <tr class="hover">
-                <td class="w-[5%] text-left align-middle whitespace-pre-line">6.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[5]->question }}</td>
-                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->A6 == null) ? '-' : $infrastructure[0]->A6 }}</td>
-                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_A6 == null) ? '-' : $infrastructure[0]->explanation_A6 }}</td>
-            </tr>
-            <tr class="hover">
-                <td class="w-[5%] text-left align-middle whitespace-pre-line">7.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[6]->question }}</td>
-                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->A7 == null) ? '-' : $infrastructure[0]->A7 }}</td>
-                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_A7 == null) ? '-' : $infrastructure[0]->explanation_A7 }}</td>
-            </tr>
         </tbody>
     </table>
     <table class="table table-fixed mb-3">
@@ -94,32 +82,26 @@
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">1.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[7]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[5]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->B1 == null) ? '-' : $infrastructure[0]->B1 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_B1 == null) ? '-' : $infrastructure[0]->explanation_B1 }}</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">2.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[8]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[6]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->B2 == null) ? '-' : $infrastructure[0]->B2 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_B2 == null) ? '-' : $infrastructure[0]->explanation_B2 }}</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">3.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[9]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[7]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->B3 == null) ? '-' : $infrastructure[0]->B3 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_B3 == null) ? '-' : $infrastructure[0]->explanation_B3 }}</td>
-            </tr>
-            <tr class="hover">
-                <td class="w-[5%] text-left align-middle whitespace-pre-line">4.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[10]->question }}</td>
-                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->B4 == null) ? '-' : $infrastructure[0]->B4 }}</td>
-                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_B4 == null) ? '-' : $infrastructure[0]->explanation_B4 }}</td>
             </tr>
         </tbody>
     </table>
     <table class="table table-fixed mb-3">
-        <thead><tr><th colspan="4">Profil Fasilitas Sekolah</th></tr></thead>
+        <thead><tr><th colspan="4">Sarana Sanitasi</th></tr></thead>
         <tbody>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">No</td>
@@ -129,21 +111,57 @@
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">1.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[11]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[8]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->C1 == null) ? '-' : $infrastructure[0]->C1 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_C1 == null) ? '-' : $infrastructure[0]->explanation_C1 }}</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">2.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[12]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[9]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->C2 == null) ? '-' : $infrastructure[0]->C2 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_C2 == null) ? '-' : $infrastructure[0]->explanation_C2 }}</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">3.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[13]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[10]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->C3 == null) ? '-' : $infrastructure[0]->C3 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_C3 == null) ? '-' : $infrastructure[0]->explanation_C3 }}</td>
+            </tr>
+            <tr class="hover">
+                <td class="w-[5%] text-left align-middle whitespace-pre-line">4.</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[11]->question }}</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->C4 == null) ? '-' : $infrastructure[0]->C4 }}</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_C4 == null) ? '-' : $infrastructure[0]->explanation_C4 }}</td>
+            </tr>
+            <tr class="hover">
+                <td class="w-[5%] text-left align-middle whitespace-pre-line">5.</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[12]->question }}</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->C5 == null) ? '-' : $infrastructure[0]->C5 }}</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_C5 == null) ? '-' : $infrastructure[0]->explanation_C5 }}</td>
+            </tr>
+            <tr class="hover">
+                <td class="w-[5%] text-left align-middle whitespace-pre-line">6.</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[13]->question }}</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->C6 == null) ? '-' : $infrastructure[0]->C6 }}</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_C6 == null) ? '-' : $infrastructure[0]->explanation_C6 }}</td>
+            </tr>
+            <tr class="hover">
+                <td class="w-[5%] text-left align-middle whitespace-pre-line">7.</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[14]->question }}</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->C7 == null) ? '-' : $infrastructure[0]->C7 }}</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_C7 == null) ? '-' : $infrastructure[0]->explanation_C7 }}</td>
+            </tr>
+            <tr class="hover">
+                <td class="w-[5%] text-left align-middle whitespace-pre-line">8.</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[15]->question }}</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->C8 == null) ? '-' : $infrastructure[0]->C8 }}</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_C8 == null) ? '-' : $infrastructure[0]->explanation_C8 }}</td>
+            </tr>
+            <tr class="hover">
+                <td class="w-[5%] text-left align-middle whitespace-pre-line">9.</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[16]->question }}</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->C9 == null) ? '-' : $infrastructure[0]->C9 }}</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_C9 == null) ? '-' : $infrastructure[0]->explanation_C9 }}</td>
             </tr>
         </tbody>
     </table>
@@ -158,27 +176,39 @@
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">1.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[14]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[17]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->D1 == null) ? '-' : $infrastructure[0]->D1 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_D1 == null) ? '-' : $infrastructure[0]->explanation_D1 }}</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">2.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[15]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[18]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->D2 == null) ? '-' : $infrastructure[0]->D2 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_D2 == null) ? '-' : $infrastructure[0]->explanation_D2 }}</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">3.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[16]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[19]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->D3 == null) ? '-' : $infrastructure[0]->D3 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_D3 == null) ? '-' : $infrastructure[0]->explanation_D3 }}</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">4.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[17]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[20]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->D4 == null) ? '-' : $infrastructure[0]->D4 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_D4 == null) ? '-' : $infrastructure[0]->explanation_D4 }}</td>
+            </tr>
+            <tr class="hover">
+                <td class="w-[5%] text-left align-middle whitespace-pre-line">5.</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[21]->question }}</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->D5 == null) ? '-' : $infrastructure[0]->D5 }}</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_D5 == null) ? '-' : $infrastructure[0]->explanation_D5 }}</td>
+            </tr>
+            <tr class="hover">
+                <td class="w-[5%] text-left align-middle whitespace-pre-line">6.</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[22]->question }}</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->D6 == null) ? '-' : $infrastructure[0]->D6 }}</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_D6 == null) ? '-' : $infrastructure[0]->explanation_D6 }}</td>
             </tr>
         </tbody>
     </table>
@@ -193,33 +223,26 @@
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">1.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[18]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[23]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->E1 == null) ? '-' : $infrastructure[0]->E1 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_E1 == null) ? '-' : $infrastructure[0]->explanation_E1 }}</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">2.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[19]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[24]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->E2 == null) ? '-' : $infrastructure[0]->E2 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_E2 == null) ? '-' : $infrastructure[0]->explanation_E2 }}</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">3.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[20]->question }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[25]->question }}</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->E3 == null) ? '-' : $infrastructure[0]->E3 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_E3 == null) ? '-' : $infrastructure[0]->explanation_E3 }}</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">4.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[21]->question }}</td>
-                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->E4 == null) ? '-' : $infrastructure[0]->E4 }}</td>
-                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_E4 == null) ? '-' : $infrastructure[0]->explanation_E4 }}</td>
-            </tr>
-            <tr class="hover">
-                <td class="w-[5%] text-left align-middle whitespace-pre-line">5.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[22]->question }}</td>
-                <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->E5 == null) ? '-' : $infrastructure[0]->E5 }}</td>
-                <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_E5 == null) ? '-' : $infrastructure[0]->explanation_E5 }}</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">{{ $question[26]->question }}</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line" colspan="2">{{ ($infrastructure[0]->notes == null) ? '-' : $infrastructure[0]->notes }}</td>
             </tr>
         </tbody>
     </table>

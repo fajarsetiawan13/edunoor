@@ -3,7 +3,7 @@
 @section('section')
 
 <section id="dashboard" class="py-16">
-    <div class="container flex items-start flex-col justify-center gap-3 mx-auto px-4 pt-4 md:flex-row">
+    <div class="container flex items-start flex-col justify-center gap-3 mx-auto px-4 py-4 md:flex-row">
         <div class="card w-full bg-base-100 shadow-lg md:w-1/3">
             <div class="card-body">
                 <h2 class="card-title">Informasi Sekolah</h2>
@@ -79,24 +79,19 @@
                 <div class="divider my-0"></div>
                 <div class="flex flex-col gap-2">
                     <span class="text-sm font-bold text-center">Generate QR Code</span>
-                    <a href="/gen-qr-school/{{ $school[0]->id }}"
-                        class="btn btn-sm btn-primary self-center text-white text-sm w-2/3"
-                        onclick="return confirm('Generate QR Code?')">For School</a>
-                    <a href="/gen-qr-students/{{ $school[0]->id }}"
-                        class="btn btn-sm btn-info self-center text-white text-sm w-2/3"
-                        onclick="return confirm('Generate QR Code?')">For All Students</a>
+                    <a href="/gen-qr-school/{{ $school[0]->id }}" class="btn btn-sm btn-primary self-center text-white text-sm w-2/3" onclick="return confirm('Generate QR Code?')">For School</a>
+                    <a href="/gen-qr-students/{{ $school[0]->id }}" class="btn btn-sm btn-info self-center text-white text-sm w-2/3" onclick="return confirm('Generate QR Code?')">For All Students</a>
                 </div>
                 <div class="divider my-0"></div>
-                <div class="card flex flex-row align-items-center self-center w-[300px] h-[200px] rounded-none"
-                    id="school-card" style="background-image: url('/img/card-school.webp');">
-                    <figure class="bg-white w-1/2 my-4 ml-4 mr-0 w-100 h-100 rounded-r-none rounded-l-2xl">
+                <div class="card flex flex-row align-items-center self-center w-[300px] h-[200px] rounded-none" id="school-card" style="background-image: url('/img/card-school.webp');">
+                    <figure class="bg-white w-1/2 my-3 ml-3 mr-0 w-100 h-100 rounded-r-none rounded-l-2xl">
                         @if($qrcode->count())
                         <img src="{{ asset('/' . $qrcode[0]->qr_image) }}" alt="QR Code Image for School">
                         @else
                         <img src="" alt="QR Code Image for School">
                         @endif
                     </figure>
-                    <div class="card-body pl-2 pr-0 gap-0 bg-white my-4 mr-4 rounded-r-2xl w-100 h-100">
+                    <div class="card-body pl-2 pr-0 gap-0 bg-white my-3 mr-3 rounded-r-2xl w-100 h-100">
                         <h6 class="card-title text-xs">{{ $school[0]->name }}</h6>
                         <p class="text-[10px]">{{ $school[0]->npsn }}</p>
                         <div class="divider my-0"></div>
@@ -104,9 +99,7 @@
                         <p class="text-[10px]">Akreditasi : {{ $school[0]->akreditasi }}</p>
                     </div>
                 </div>
-                <label for="download-qr-school" onclick="cetakCard()"
-                    class="btn btn-sm btn-secondary self-center text-white text-sm w-2/3">Cetak Kartu</label>
-
+                <label for="download-qr-school" onclick="cetakCard()" class="btn btn-sm btn-secondary self-center text-white text-sm w-2/3">Cetak Kartu</label>
             </div>
         </div>
         <div class="card w-full bg-base-100 shadow-lg md:w-2/3 mb-3">
@@ -126,8 +119,7 @@
         <label for="download-qr-school" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
         <div id="result" class="flex justify-center"></div>
         <div class="modal-action">
-            <button onclick="unduh()"
-                class="btn btn-sm btn-secondary self-center text-white text-sm w-1/3">Unduh!</button>
+            <button onclick="unduh()" class="btn btn-sm btn-secondary self-center text-white text-sm w-1/3">Unduh!</button>
         </div>
     </div>
 </div>
@@ -139,8 +131,7 @@
         <label for="download-qr-student" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
         <div id="resultStdCard" class="flex justify-center"></div>
         <div class="modal-action">
-            <button onclick="unduhKartu()"
-                class="btn btn-sm btn-secondary self-center text-white text-sm w-1/3">Unduh!</button>
+            <button onclick="unduhKartu()" class="btn btn-sm btn-secondary self-center text-white text-sm w-1/3">Unduh!</button>
         </div>
     </div>
 </div>

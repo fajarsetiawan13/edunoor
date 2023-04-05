@@ -10,8 +10,7 @@
                             d="M4 6h16M4 12h16M4 18h7" />
                     </svg>
                 </label>
-                <ul tabindex="0"
-                    class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-56">
+                <ul tabindex="0" class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-56">
                     <li>
                         <a class="{{ Request::is('dashboard*') ? 'active' : ''}}"
                             href="{{ Request::is('dashboard') ? '#' : '/dashboard'}}">
@@ -91,7 +90,7 @@
             </div>
         </div>
         <div class="navbar-center">
-            <a class="btn btn-sm btn-ghost normal-case text-sm md:btn-md md:text-md">EDUNOOR</a>
+            <a class="btn btn-sm btn-ghost normal-case text-md md:btn-md md:text-lg">EDUNOOR</a>
         </div>
         <div class="navbar-end">
             {{-- <div class="dropdown dropdown-end">

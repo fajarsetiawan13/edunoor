@@ -12,16 +12,14 @@
     </div>
     @endif
 
-    <label class="btn btn-sm btn-primary w-full md:w-1/3 md:btn-md text-white mb-3" for="student-create">Tambah
-        Siswa Baru</label>
+    <label class="btn btn-sm btn-primary w-full md:w-1/3 md:btn-md text-white mb-3" for="student-create">Tambah Siswa Baru</label>
     <div class="flex flex-row gap-2 justify-between mb-3">
         <select wire:model='paginate' class="select select-sm select-bordered w-full max-w-[75px] md:select-md">
             <option value="5">5</option>
             <option value="10">10</option>
             <option value="20">20</option>
         </select>
-        <input wire:model='search' type="text" placeholder="Kolom Pencarian…"
-            class="input input-sm input-bordered w-full max-w-sm md:max-w-md md:input-md" />
+        <input wire:model='search' type="text" placeholder="Kolom Pencarian…" class="input input-sm input-bordered w-full max-w-sm md:max-w-md md:input-md" />
     </div>
 
     <table class="table w-full">
@@ -41,21 +39,17 @@
                 <td>{{ $st->nisn }}</td>
                 <td>
                     <div class="dropdown dropdown-left">
-                        <label tabindex="0" class="btn btn-xs md:btn-sm"><svg xmlns="http://www.w3.org/2000/svg"
-                                class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24"
-                                style="fill: rgb(255, 255, 255);transform: ;msFilter:;">
+                        <label tabindex="0" class="btn btn-xs md:btn-sm">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" width="20" height="20" viewBox="0 0 24 24" style="fill: rgb(255, 255, 255);transform: ;msFilter:;">
                                 <path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4z"></path>
                             </svg>
                         </label>
                         <ul tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
                             <li>
-                                <label wire:click='getStudentCard({{ $st->id }})' class="modal-btn"
-                                    for="student-card">Kartu QR Siswa</label>
+                                <label wire:click='getStudentCard({{ $st->id }})' class="modal-btn" for="student-card">Kartu QR Siswa</label>
                             </li>
                             <li>
-                                <label wire:click='getStudent({{ $st->id }})' class="modal-btn"
-                                    for="student-update">Edit
-                                    Informasi Siswa</label>
+                                <label wire:click='getStudent({{ $st->id }})' class="modal-btn" for="student-update">Edit Informasi Siswa</label>
                             </li>
                             <li>
                                 <button onclick="return confirm('Anda ingin menghapus data Siswa?')  || event.stopImmediatePropagation()" wire:click='destroy({{ $st->id }})'>Hapus Siswa</button>

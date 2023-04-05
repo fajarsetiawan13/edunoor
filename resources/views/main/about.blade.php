@@ -51,12 +51,17 @@
         <div class=" lex justify-items-center hero-content text-neutral-content">
             <div class="card w-96 bg-base-100 shadow-xl">
                 <figure class="px-10 pt-10">
-                  <img src="{{ asset('/img/default.webp') }}" alt="Image" class="rounded-xl" />
+                  <img src="{{ asset('/img/mahasiswa.jpeg') }}" alt="Image" class="rounded-xl max-w-[150px] max-h-[180px] object-cover" />
                 </figure>
                 <div class="card-body items-center text-center">
-                  <h2 class="card-title text-slate-800 text-center">NAJLA SALSABILA NOOR</h2>
-                  <p class="text-slate-800 text-center">IMAHASISWA S-2 PASCASARJANA ILMU KESEHATAN MASYARAKAT</p>
-                  <p class="text-slate-800 text-center">UNIVERSITAS AIRLANGGA</p>
+                  <h2 class="card-title text-slate-800 text-center">Naila Salsabila Noor</h2>
+                  <h2 class="card-title text-slate-800 text-center">101914553002</h2>
+                  <p class="text-slate-800 text-center">Mahasiswa Pascasarjana Epidemiologi Prodi Manajemen Surveilans Epidemiologi dan Informasi Kesehatan</p>
+                  <p class="text-slate-800 text-center">Universitas Airlangga</p>
+                  <div class="divider m-0"></div> 
+                  <p class="card-title text-slate-800 text-center">Pembimbing</p>
+                  <p class="text-slate-800 text-start">Dr. Fariani Syahrul, SKM., M.Kes</p>
+                  <p class="text-slate-800 text-end">Dr. Hari Basuki Notobroto, dr., M.Kes</p>
                 </div>
             </div>
         </div>

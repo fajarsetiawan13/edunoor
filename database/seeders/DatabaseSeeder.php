@@ -23,13 +23,8 @@ class DatabaseSeeder extends Seeder
         User::create(['name' => 'admin', 'username' => 'admin', 'password' => bcrypt('password'), 'image' => 'default.webp', 'role' => 1, 'is_active' => 1]);
         User::create(['name' => 'admin2', 'username' => 'admin2', 'password' => bcrypt('password'), 'image' => 'default.webp', 'role' => 1, 'is_active' => 2]);
         User::create(['name' => 'admin3', 'username' => 'admin3', 'password' => bcrypt('password'), 'image' => 'default.webp', 'role' => 1, 'is_active' => 2]);
-        User::create(['name' => 'admin4', 'username' => 'admin4', 'password' => bcrypt('password'), 'image' => 'default.webp', 'role' => 1, 'is_active' => 2]);
-        User::create(['name' => 'admin5', 'username' => 'admin5', 'password' => bcrypt('password'), 'image' => 'default.webp', 'role' => 1, 'is_active' => 2]);
         User::create(['name' => 'user', 'username' => 'user', 'password' => bcrypt('password'), 'image' => 'default.webp', 'role' => 2, 'is_active' => 1]);
         User::create(['name' => 'user2', 'username' => 'user2', 'password' => bcrypt('password'), 'image' => 'default.webp', 'role' => 2, 'is_active' => 2]);
-        User::create(['name' => 'user3', 'username' => 'user3', 'password' => bcrypt('password'), 'image' => 'default.webp', 'role' => 2, 'is_active' => 2]);
-        User::create(['name' => 'user4', 'username' => 'user4', 'password' => bcrypt('password'), 'image' => 'default.webp', 'role' => 2, 'is_active' => 2]);
-        User::create(['name' => 'user5', 'username' => 'user5', 'password' => bcrypt('password'), 'image' => 'default.webp', 'role' => 2, 'is_active' => 2]);
 
         Students::create(['name' => 'Siswa 1 SMA N 12', 'nisn' => '11223344', 'school_id' => '1']);
         Students::create(['name' => 'Siswa 2 SMA N 12', 'nisn' => '22334455', 'school_id' => '1']);
@@ -194,33 +189,36 @@ class DatabaseSeeder extends Seeder
             'kurikulum' => 'Kurikulum 2013',
         ]);
 
-        Questionnaire::create(['question' => 'Ketersediaan Tempat Cuci Tangan']);
-        Questionnaire::create(['question' => 'Ketersediaan Sabun Cuci Tangan']);
-        Questionnaire::create(['question' => 'Ketersediaan Air Mengalir']);
-        Questionnaire::create(['question' => 'Ketersediaan Handsanitizer']);
-        Questionnaire::create(['question' => 'Ketersediaan Masker']);
-        Questionnaire::create(['question' => 'Ketaatan Penggunaan Masker']);
-        Questionnaire::create(['question' => 'Ketersediaan Thermogun']);
+        Questionnaire::create(['question' => 'Luas Sekolah']);
+        Questionnaire::create(['question' => 'Luas Ruang Terbuka']);
+        Questionnaire::create(['question' => 'Jumlah Kelas']);
+        Questionnaire::create(['question' => 'Luas Ruang Kelas']);
+        Questionnaire::create(['question' => 'Ketersediaan Ventilasi']);
 
         Questionnaire::create(['question' => 'Jumlah Guru']);
         Questionnaire::create(['question' => 'Jumlah Siswa']);
-        Questionnaire::create(['question' => 'Jumlah Kelas']);
-        Questionnaire::create(['question' => 'Jumlah Tenaga Kependidikan']);
+        Questionnaire::create(['question' => 'Jumlah Tenaga Administrasi']);
 
-        Questionnaire::create(['question' => 'Luas Sekolah']);
-        Questionnaire::create(['question' => 'Luas Ruang Terbuka']);
-        Questionnaire::create(['question' => 'Ketersediaan Ventilasi']);
+        Questionnaire::create(['question' => 'Jumlah Toilet']);
+        Questionnaire::create(['question' => 'Ketersedian Air di Toilet']);
+        Questionnaire::create(['question' => 'Ketersediaan Sabun Cuci Tangan di Toilet']);
+        Questionnaire::create(['question' => 'Disinfektan Toilet']);
+        Questionnaire::create(['question' => 'Ketersediaan Tempat Cuci Tangan di Depan Kelas']);
+        Questionnaire::create(['question' => 'Ketersediaan Handsanitizer']);
+        Questionnaire::create(['question' => 'Ketersediaan Thermogun']);
+        Questionnaire::create(['question' => 'Ketersediaan Masker']);
+        Questionnaire::create(['question' => 'Ketaatan Penggunaan Masker']);
 
         Questionnaire::create(['question' => 'Ketersediaan Satgas Covid-19']);
-        Questionnaire::create(['question' => 'Ketersediaan Protokol Kesehatan']);
+        Questionnaire::create(['question' => 'Sosialisasi Protokol Kesehatan']);
         Questionnaire::create(['question' => 'Ketersediaan Prosedur Penanganan Covid-19']);
-        Questionnaire::create(['question' => 'Ketersediaan media informasi Covid-19']);
+        Questionnaire::create(['question' => 'Ketersediaan Media Informasi Covid-19']);
+        Questionnaire::create(['question' => 'Ketersediaan Peraturan/Tata Tertib Covid-19']);
+        Questionnaire::create(['question' => 'Ketersediaan Kantin Sehat']);
 
-        Questionnaire::create(['question' => 'Jumlah data Covid-19 per minggu']);
-        Questionnaire::create(['question' => 'Jumlah kontak erat']);
-        Questionnaire::create(['question' => 'Waktu terakhir kontak erat']);
-        Questionnaire::create(['question' => 'Gejala kontak erat']);
-        Questionnaire::create(['question' => 'Waktu terjadi gejala kasus']);
+        Questionnaire::create(['question' => 'Data Covid-19 Setahun Terakhir']);
+        Questionnaire::create(['question' => 'Jumlah dan Sebaran Kasus per Bulan']);
+        Questionnaire::create(['question' => 'Pemusatan Covid-19 pada Kelas Tertentu']);
 
         Articles::create([
             'user_id' => 1, 'title' => 'artikel pertama', 'slug' => 'artikel-pertama',

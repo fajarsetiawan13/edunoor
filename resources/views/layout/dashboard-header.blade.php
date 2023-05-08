@@ -29,7 +29,7 @@
                             Dasbor
                         </a>
                     </li>
-                    <li>
+                    {{-- <li>
                         <a class="{{ Request::is('qr*') ? 'active' : ''}}" href="{{ Request::is('qr') ? '#' : '/qr'}}">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 style="fill: rgba(50, 50, 50, 1);transform: ;msFilter:;">
@@ -48,7 +48,7 @@
                             </svg>
                             Scan QR
                         </a>
-                    </li>
+                    </li> --}}
                     <li>
                         <a class="{{ Request::is('setting*') ? 'active' : ''}}"
                             href="{{ Request::is('setting') ? '#' : '/setting'}}">

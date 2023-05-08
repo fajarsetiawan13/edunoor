@@ -27,6 +27,7 @@
             Scan QR
         </a>
     </li>
+    @can('admin')
     <li>
         <a class="{{ Request::is('dashboard/users*') ? 'active' : ''}}"
             href="{{ Request::is('dashboard/users') ? '#' : '/dashboard/users'}}">
@@ -60,6 +61,7 @@
             Kuesioner
         </a>
     </li>
+    @endcan
     <li>
         <a class="{{ Request::is('dashboard/articles*') ? 'active' : ''}}"
             href="{{ Request::is('dashboard/articles') ? '#' : '/dashboard/articles'}}">
@@ -90,4 +92,20 @@
             Pengaturan
         </a>
     </li>
+    <form action="/logout" method="POST">
+        <li>
+            @csrf
+            <button class="btn btn-ghost w-full justify-start normal-case hover:btn-error"
+                onclick="return confirm('Anda ingin keluar?')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                    style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
+                    <path d="M16 13v-2H7V8l-5 4 5 4v-3z"></path>
+                    <path
+                        d="M20 3h-9c-1.103 0-2 .897-2 2v4h2V5h9v14h-9v-4H9v4c0 1.103.897 2 2 2h9c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z">
+                    </path>
+                </svg>
+                Keluar
+            </button>
+        </li>
+    </form>
 </ul>

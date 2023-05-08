@@ -94,7 +94,7 @@ class MainController extends Controller
         for ($i = 0; $i < count($data[2]); $i++) {
             $batas_SMA[$i] = 36;
         }
-        
+
         return view('main.statistics', [
             'title' => 'Statistik Data Kesehatan Sekolah | Sistem Basis Data Sekolah',
             'setting' => Setting::all(),
@@ -132,7 +132,7 @@ class MainController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            if (auth()->user()->is_active == 0) {
+            if (auth()->user()->is_active != 1) {
                 Auth::logout();
 
                 $request->session()->invalidate();

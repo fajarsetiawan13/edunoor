@@ -18,24 +18,24 @@
                 <div class="flex">
                     <div class="flex flex-wrap w-full justify-around md:justify-start">
                         <a href="/dashboard/users" class="p-2">
-                            <img class="mask mask-squircle " width="100" height="100" src="/img/menu-user.jpg"
-                                alt="Icon Menu Users" />
+                            <img class="mask mask-squircle " width="100" height="100" src="/img/menu-user.jpg" alt="Icon Menu Users" />
                         </a>
-                        <a href="/dashboard/schools" class="p-2">
-                            <img class="mask mask-squircle" width="100" height="100" src="/img/menu-schools.jpg"
-                                alt="Icon Menu Schools" />
-                        </a>
-                        <a href="/dashboard/questionare" class="p-2">
-                            <img class="mask mask-squircle" width="100" height="100" src="/img/menu-questionare.jpg"
-                                alt="Icon Questionnaire" />
+                        <a href="/qr" class="p-2">
+                            <img class="mask mask-squircle" width="100" height="100" src="/img/menu-qr.jpg" alt="Icon Menu Schools" />
                         </a>
                         <a href="/dashboard/articles" class="p-2">
-                            <img class="mask mask-squircle" width="100" height="100" src="/img/menu-articles.jpg"
-                                alt="Icon Articles" />
+                            <img class="mask mask-squircle" width="100" height="100" src="/img/menu-articles.jpg" alt="Icon Articles" />
                         </a>
+                        @can('admin')
+                        <a href="/dashboard/schools" class="p-2">
+                            <img class="mask mask-squircle" width="100" height="100" src="/img/menu-schools.jpg" alt="Icon Menu Schools" />
+                        </a>
+                        <a href="/dashboard/questionare" class="p-2">
+                            <img class="mask mask-squircle" width="100" height="100" src="/img/menu-questionare.jpg"  alt="Icon Questionnaire" />
+                        </a>
+                        @endcan
                         <a href="/setting" class="p-2">
-                            <img class="mask mask-squircle" width="100" height="100" src="/img/menu-setting.jpg"
-                                alt="Icon Setting" />
+                            <img class="mask mask-squircle" width="100" height="100" src="/img/menu-setting.jpg" alt="Icon Setting" />
                         </a>
                     </div>
                 </div>

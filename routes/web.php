@@ -29,12 +29,13 @@ Route::post('/logout', [MainController::class, 'logout']);
 
 // DASHBOARD ROUTES
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware('auth');
-Route::get('/dashboard/users', [DashboardController::class, 'users'])->middleware('auth');
-Route::get('/dashboard/schools', [SchoolController::class, 'index'])->middleware('auth');
-Route::get('/dashboard/schools/{id}', [SchoolController::class, 'school_profile'])->middleware('auth');
-Route::get('/dashboard/questionare', [SchoolController::class, 'questionare'])->middleware('auth');
+Route::get('/dashboard/users', [DashboardController::class, 'users'])->middleware('admin');
+Route::get('/dashboard/schools', [SchoolController::class, 'index'])->middleware('admin');
+Route::get('/dashboard/schools/{id}', [SchoolController::class, 'school_profile'])->middleware('admin');
+Route::get('/dashboard/questionare', [SchoolController::class, 'questionare'])->middleware('admin');
 Route::get('/setting', [DashboardController::class, 'setting'])->middleware('auth');
 Route::get('/check/slug', [DashboardController::class, 'check_slug'])->middleware('auth');
+Route::post('/password', [DashboardController::class, 'change_password'])->middleware('auth');
 Route::post('/setting', [DashboardController::class, 'setting_store']);
 Route::put('/setting', [DashboardController::class, 'setting_update']);
 

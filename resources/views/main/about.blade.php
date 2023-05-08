@@ -46,9 +46,9 @@
 @endif
 
 <section id="hero">
-    <div class="hero min-h-screen" style="background-image: url('{{ asset('/img/unair-1.jpg') }}');">
+    <div class="hero min-h-screen" style="background-image: url('{{ asset("/img/unair-1.jpg") }}');">
         <div class="hero-overlay bg-opacity-60"></div>
-        <div class=" lex justify-items-center hero-content text-neutral-content">
+        <div class="flex justify-items-center hero-content text-neutral-content">
             <div class="card w-96 bg-base-100 shadow-xl">
                 <figure class="px-10 pt-10">
                   <img src="{{ asset('/img/mahasiswa.jpeg') }}" alt="Image" class="rounded-xl max-w-[150px] max-h-[180px] object-cover" />

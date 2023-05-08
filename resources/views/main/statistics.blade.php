@@ -581,15 +581,15 @@
                                     <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_D5 }}</td>
                                 </tr>
                                 <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Kantin Sehat</td>
-                                    <td class="text-left align-top">
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Ketersediaan Kantin Sehat</td>
+                                    <td class="text-left align-top border-b">
                                         @if($sd->D6 == 'Ya')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
                                         @elseif($sd->D6 == 'Tidak')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
                                         @endif
                                     </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_D6 }}</td>
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $sd->desc_D6 }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -669,15 +669,15 @@
                                     <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_D5 }}</td>
                                 </tr>
                                 <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Kantin Sehat</td>
-                                    <td class="text-left align-top">
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Ketersediaan Kantin Sehat</td>
+                                    <td class="text-left align-top border-b">
                                         @if($smp->D6 == 'Ya')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
                                         @elseif($smp->D6 == 'Tidak')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
                                         @endif
                                     </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_D6 }}</td>
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $smp->desc_D6 }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -757,15 +757,15 @@
                                     <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_D5 }}</td>
                                 </tr>
                                 <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Kantin Sehat</td>
-                                    <td class="text-left align-top">
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Ketersediaan Kantin Sehat</td>
+                                    <td class="text-left align-top border-b">
                                         @if($sma->D6 == 'Ya')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
                                         @elseif($sma->D6 == 'Tidak')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
                                         @endif
                                     </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_D6 }}</td>
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $sma->desc_D6 }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -793,8 +793,8 @@
                             <tbody>
                                 @foreach($basis_data_sd as $sd)
                                 <tr class="hover">
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $sd->school }}</td>
+                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
+                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $sd->school }}</td>
                                 </tr>
                                 <tr class="hover">
                                     <td class="text-left align-top whitespace-pre-line">Data Covid-19 Setahun Terakhir</td>
@@ -819,15 +819,15 @@
                                     <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_E2 }}</td>
                                 </tr>
                                 <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Pemusatan Covid-19 pada Kelas Tertentu</td>
-                                    <td class="text-left align-top">
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Pemusatan Covid-19 pada Kelas Tertentu</td>
+                                    <td class="text-left align-top border-b">
                                         @if($sd->E3 == 'Ya')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
                                         @elseif($sd->E3 == 'Tidak')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
                                         @endif
                                     </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_E3 }}</td>
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $sd->desc_E3 }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -848,8 +848,8 @@
                             <tbody>
                                 @foreach($basis_data_smp as $smp)
                                 <tr class="hover">
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $smp->school }}</td>
+                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
+                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $smp->school }}</td>
                                 </tr>
                                 <tr class="hover">
                                     <td class="text-left align-top whitespace-pre-line">Data Covid-19 Setahun Terakhir</td>
@@ -874,15 +874,15 @@
                                     <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_E2 }}</td>
                                 </tr>
                                 <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Pemusatan Covid-19 pada Kelas Tertentu</td>
-                                    <td class="text-left align-top">
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Pemusatan Covid-19 pada Kelas Tertentu</td>
+                                    <td class="text-left align-top border-b">
                                         @if($smp->E3 == 'Ya')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
                                         @elseif($smp->E3 == 'Tidak')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
                                         @endif
                                     </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_E3 }}</td>
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $smp->desc_E3 }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>
@@ -903,8 +903,8 @@
                             <tbody>
                                 @foreach($basis_data_sma as $sma)
                                 <tr class="hover">
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $sma->school }}</td>
+                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
+                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $sma->school }}</td>
                                 </tr>
                                 <tr class="hover">
                                     <td class="text-left align-top whitespace-pre-line">Data Covid-19 Setahun Terakhir</td>
@@ -929,15 +929,15 @@
                                     <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_E2 }}</td>
                                 </tr>
                                 <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Pemusatan Covid-19 pada Kelas Tertentu</td>
-                                    <td class="text-left align-top">
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">Pemusatan Covid-19 pada Kelas Tertentu</td>
+                                    <td class="text-left align-top border-b">
                                         @if($sma->E3 == 'Ya')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
                                         @elseif($sma->E3 == 'Tidak')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
                                         @endif
                                     </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_E3 }}</td>
+                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $sma->desc_E3 }}</td>
                                 </tr>
                                 @endforeach
                             </tbody>

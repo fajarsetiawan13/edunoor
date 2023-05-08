@@ -26,6 +26,7 @@
                     <li><a href="{{ Request::is('articles') ? '#' : '/articles'}}">Artikel</a></li>
                     <li><a href="{{ Request::is('statistics') ? '#' : '/statistics'}}">Statistik</a></li>
                     <li><a href="{{ Request::is('about') ? '#' : '/about'}}">Tentang</a></li>
+                    <li><a href="https://lansia.edunoor.net" target="_blank">RPSLU</a></li>
                 </ul>
             </div>
             {{-- <a class="btn btn-sm btn-ghost normal-case text-sm md:btn-md md:text-md">EDUNOOR</a> --}}
@@ -36,6 +37,7 @@
                 <li><a href="{{ Request::is('articles') ? '#' : '/articles'}}">Artikel</a></li>
                 <li><a href="{{ Request::is('statistics') ? '#' : '/statistics'}}">Statistik</a></li>
                 <li><a href="{{ Request::is('about') ? '#' : '/about'}}">Tentang</a></li>
+                <li><a href="https://lansia.edunoor.net" target="_blank">RPSLU</a></li>
             </ul>
         </div>
         <div class="navbar-end">

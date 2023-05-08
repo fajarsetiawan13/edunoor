@@ -27,7 +27,7 @@
             Scan QR
         </a>
     </li>
-    @can('admin')
+    {{-- @can('admin') --}}
     <li>
         <a class="{{ Request::is('dashboard/users*') ? 'active' : ''}}"
             href="{{ Request::is('dashboard/users') ? '#' : '/dashboard/users'}}">
@@ -61,7 +61,7 @@
             Kuesioner
         </a>
     </li>
-    @endcan
+    {{-- @endcan --}}
     <li>
         <a class="{{ Request::is('dashboard/articles*') ? 'active' : ''}}"
             href="{{ Request::is('dashboard/articles') ? '#' : '/dashboard/articles'}}">

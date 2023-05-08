@@ -57,7 +57,7 @@
             <div class="card-body">
                 <h2 class="card-title">{{ $title }}</h2>
                 <div class="divider my-0"></div>
-                @can('admin')
+                {{-- @can('admin') --}}
                 <form action="/setting" method="POST">
                     @csrf
                     @if($setting->count())
@@ -77,7 +77,7 @@
                         <input type="date" id="pemantauan_kontak_erat" name="pemantauan_kontak_erat" @if($setting->count()) value="{{ $setting[0]->pemantauan_kontak_erat }}" @endif  class="input input-bordered w-80" />
                     </div>
                 </form>
-                @endcan
+                {{-- @endcan --}}
                 
                 <h2 class="card-title">Ubah Password</h2>
                 <form action="/password" method="POST">

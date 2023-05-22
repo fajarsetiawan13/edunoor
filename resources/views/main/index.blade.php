@@ -70,6 +70,37 @@
 </div>
 
 <section id="articles-newest">
+    <div class="text-2xl font-semibold text-center text-slate-800 px-8 pt-6 pb-2">Dokumentasi Kegiatan</div>
+    <div class="divider my-0 w-[300px] mx-auto"></div>
+    <div class="flex flex-wrap justify-center md:justify-center gap-3 px-8 pb-8 pt-4">
+        <div class="card card-compact w-96 bg-base-100 shadow-lg mb-4">
+            <figure><img src="{{ asset('/img/slide-1.jpg') }}" alt="" /></figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Judul</h2>
+            </div>
+        </div>
+        <div class="card card-compact w-96 bg-base-100 shadow-lg mb-4">
+            <figure><img src="{{ asset('/img/slide-2.jpg') }}" alt="" /></figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Judul</h2>
+            </div>
+        </div>
+        <div class="card card-compact w-96 bg-base-100 shadow-lg mb-4">
+            <figure><img src="{{ asset('/img/slide-3.jpg') }}" alt="" /></figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Judul</h2>
+            </div>
+        </div>
+        <div class="card card-compact w-96 bg-base-100 shadow-lg mb-4">
+            <figure><img src="{{ asset('/img/slide-4.jpg') }}" alt="" /></figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title">Judul</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+{{-- <section id="articles-newest">
     <div class="text-2xl font-semibold text-center text-slate-800 px-8 pt-6 pb-2">Artikel Terbaru</div>
     <div class="divider my-0 w-[300px] mx-auto"></div>
     <div class="flex flex-wrap justify-center md:justify-center gap-3 px-8 pb-8 pt-4">
@@ -95,6 +126,6 @@
     <div class="flex justify-center">
         <a href="/articles" class="btn btn-xs text-xs md:btn-sm md:text-sm btn-primary text-slate-50 px-5 mt-5 hover:opacity-70 mb-4">Lihat Artikel Lebih Banyak</a>
     </div>
-</section>
+</section> --}}
 
 @endsection

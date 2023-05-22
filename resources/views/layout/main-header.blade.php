@@ -23,7 +23,7 @@
                 <ul tabindex="0"
                     class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-slate-50 rounded-box w-52">
                     <li><a href="{{ Request::is('/*') ? '#' : '/'}}">Beranda</a></li>
-                    <li><a href="{{ Request::is('articles') ? '#' : '/articles'}}">Artikel</a></li>
+                    {{-- <li><a href="{{ Request::is('articles') ? '#' : '/articles'}}">Artikel</a></li> --}}
                     <li><a href="{{ Request::is('statistics') ? '#' : '/statistics'}}">Statistik</a></li>
                     <li><a href="{{ Request::is('about') ? '#' : '/about'}}">Tentang</a></li>
                     {{-- <li><a href="https://lansia.edunoor.net" target="_blank">RPSLU</a></li> --}}
@@ -34,7 +34,7 @@
         <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal p-0">
                 <li><a href="{{ Request::is('/*') ? '#' : '/'}}">Beranda</a></li>
-                <li><a href="{{ Request::is('articles') ? '#' : '/articles'}}">Artikel</a></li>
+                {{-- <li><a href="{{ Request::is('articles') ? '#' : '/articles'}}">Artikel</a></li> --}}
                 <li><a href="{{ Request::is('statistics') ? '#' : '/statistics'}}">Statistik</a></li>
                 <li><a href="{{ Request::is('about') ? '#' : '/about'}}">Tentang</a></li>
                 {{-- <li><a href="https://lansia.edunoor.net" target="_blank">RPSLU</a></li> --}}

@@ -3510,13 +3510,13 @@ html {
   --tw-text-opacity: 1;
   color: hsl(var(--er) / var(--tw-text-opacity));
 }
-.text-base-content {
-  --tw-text-opacity: 1;
-  color: hsl(var(--bc) / var(--tw-text-opacity));
-}
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
+}
+.text-base-content {
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
 }
 .text-slate-800 {
   --tw-text-opacity: 1;

@@ -27,7 +27,7 @@
             Scan QR
         </a>
     </li>
-    {{-- @can('admin') --}}
+    @can('admin')
     <li>
         <a class="{{ Request::is('dashboard/users*') ? 'active' : ''}}"
             href="{{ Request::is('dashboard/users') ? '#' : '/dashboard/users'}}">
@@ -61,8 +61,8 @@
             Kuesioner
         </a>
     </li>
-    {{-- @endcan --}}
-    <li>
+    @endcan
+    {{-- <li>
         <a class="{{ Request::is('dashboard/articles*') ? 'active' : ''}}"
             href="{{ Request::is('dashboard/articles') ? '#' : '/dashboard/articles'}}">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: ;msFilter:;">
@@ -76,7 +76,7 @@
             </svg>
             Artikel
         </a>
-    </li>
+    </li> --}}
     <li>
         <a class="{{ Request::is('setting*') ? 'active' : ''}}"
             href="{{ Request::is('setting') ? '#' : '/setting'}}">

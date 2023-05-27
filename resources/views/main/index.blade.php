@@ -76,25 +76,25 @@
         <div class="card card-compact w-96 bg-base-100 shadow-lg mb-4">
             <figure><img src="{{ asset('/img/slide-1.jpg') }}" alt="" /></figure>
             <div class="card-body items-center text-center">
-              <h2 class="card-title">Judul</h2>
+              <h2 class="card-title">Sosialisasi di Sekolah Dasar</h2>
             </div>
         </div>
         <div class="card card-compact w-96 bg-base-100 shadow-lg mb-4">
             <figure><img src="{{ asset('/img/slide-2.jpg') }}" alt="" /></figure>
             <div class="card-body items-center text-center">
-              <h2 class="card-title">Judul</h2>
+              <h2 class="card-title">Sosialisasi di Sekolah Menengah Pertama</h2>
             </div>
         </div>
         <div class="card card-compact w-96 bg-base-100 shadow-lg mb-4">
             <figure><img src="{{ asset('/img/slide-3.jpg') }}" alt="" /></figure>
             <div class="card-body items-center text-center">
-              <h2 class="card-title">Judul</h2>
+              <h2 class="card-title">Pemeriksaan Suhu Siswa</h2>
             </div>
         </div>
         <div class="card card-compact w-96 bg-base-100 shadow-lg mb-4">
             <figure><img src="{{ asset('/img/slide-4.jpg') }}" alt="" /></figure>
             <div class="card-body items-center text-center">
-              <h2 class="card-title">Judul</h2>
+              <h2 class="card-title">Suasana Kegiatan Belajar</h2>
             </div>
         </div>
     </div>

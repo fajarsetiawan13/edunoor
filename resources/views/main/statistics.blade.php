@@ -360,7 +360,7 @@
                                     <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_C7 }}</td>
                                 </tr>
                                 <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Thermogun</td>
+                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Masker</td>
                                     <td class="text-left align-top">
                                         @if($smp->C8 == 'Ya')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
@@ -475,7 +475,7 @@
                                     <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_C7 }}</td>
                                 </tr>
                                 <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Thermogun</td>
+                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Masker</td>
                                     <td class="text-left align-top">
                                         @if($sma->C8 == 'Ya')
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>

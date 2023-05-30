@@ -17,6 +17,7 @@ class CreateStudentsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('nisn');
+            $table->string('nik')->default('kosong');
             $table->foreignId('school_id');
             $table->timestamps();
         });

@@ -28,6 +28,7 @@
                 <th>#</th>
                 <th>Name</th>
                 <th>NISN</th>
+                <th>NIK</th>
                 <th>Aksi</th>
             </tr>
         </thead>
@@ -37,6 +38,7 @@
                 <td>{{ $loop->iteration }}</td>
                 <td>{{ $st->name }}</td>
                 <td>{{ $st->nisn }}</td>
+                <td>{{ $st->nik }}</td>
                 <td>
                     <div class="dropdown dropdown-left">
                         <label tabindex="0" class="btn btn-xs md:btn-sm">

@@ -1051,21 +1051,21 @@
    
     new Chart(ctx_kepadatan_sd, {type: 'bar', data: {labels: labels_sd, 
         datasets: [
-            {label: 'Kepadatan Siswa SD', data: data_kepadatan_sd, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1}, 
+            {label: 'Kepadatan Kelas SD', data: data_kepadatan_sd, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1}, 
             {label: 'Batas', data: batas_sd, type: 'line', order: 1, fill: false, backgroundColor: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)'}
         ]
     },options: {scales: {y: {beginAtZero: true}},}});
 
     new Chart(ctx_kepadatan_smp, {type: 'bar', data: {labels: labels_smp, 
         datasets: [
-            {label: 'Kepadatan Siswa SMP', data: data_kepadatan_smp, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1}, 
+            {label: 'Kepadatan Kelas SMP', data: data_kepadatan_smp, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1}, 
             {label: 'Batas', data: batas_smp, type: 'line', order: 1, fill: false, backgroundColor: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)'}
         ]
     },options: {scales: {y: {beginAtZero: true}},}});
 
     new Chart(ctx_kepadatan_sma, {type: 'bar', data: {labels: labels_sma, 
         datasets: [
-            {label: 'Kepadatan Siswa SMA', data: data_kepadatan_sma, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1}, 
+            {label: 'Kepadatan Kelas SMA', data: data_kepadatan_sma, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1}, 
             {label: 'Batas', data: batas_sma, type: 'line', order: 1, fill: false, backgroundColor: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)'}
         ]
     },options: {scales: {y: {beginAtZero: true}},}});

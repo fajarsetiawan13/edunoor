@@ -17,7 +17,7 @@
                     <option id="graph-4" value="4">Sarana Sanitasi</option>
                     <option id="graph-5" value="5">Kebijakan Covid-19</option>
                     <option id="graph-6" value="6">Data Covid-19</option>
-                    <option id="graph-7" value="7">Kepadatan Siswa</option>
+                    <option id="graph-7" value="7">Kepadatan Kelas</option>
                 </select>
                 <div class="" id="select-content">
                     <span class="flex justify-center font-semibold text-lg md:text-xl">Masa Pemantauan</span>
@@ -948,7 +948,7 @@
 
                 {{-- Kepadatan Siswa --}}
                 <div class="hidden" id="select-content">
-                    <span class="flex justify-center font-semibold text-lg md:text-xl">Kepadatan Siswa</span>
+                    <span class="flex justify-center font-semibold text-lg md:text-xl">Kepadatan Kelas</span>
                     <div class="divider my-0 mx-32"></div>
                     <div class="mb-3">
                         <canvas id="kepadatan_siswa_SD" class="w-full"></canvas>

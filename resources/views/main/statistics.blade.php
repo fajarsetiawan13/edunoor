@@ -82,7 +82,7 @@
                               <th>Nama Sekolah</th>
                               <th>Guru</th>
                               <th>Siswa</th>
-                              <th>Tenada Administrasi</th>
+                              <th>Tenaga Administrasi</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -107,7 +107,7 @@
                               <th>Nama Sekolah</th>
                               <th>Guru</th>
                               <th>Siswa</th>
-                              <th>Tenada Administrasi</th>
+                              <th>Tenaga Administrasi</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -132,7 +132,7 @@
                               <th>Nama Sekolah</th>
                               <th>Guru</th>
                               <th>Siswa</th>
-                              <th>Tenada Administrasi</th>
+                              <th>Tenaga Administrasi</th>
                             </tr>
                           </thead>
                           <tbody>

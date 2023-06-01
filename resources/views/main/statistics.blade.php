@@ -75,7 +75,7 @@
                     <div class="divider my-0 mx-32"></div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Dasar</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="SDM_Table_SD">
                           <thead>
                             <tr>
                               <th>No</th>
@@ -100,7 +100,7 @@
                     </div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Mengegah Pertama</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="SDM_Table_SMP">
                           <thead>
                             <tr>
                               <th>No</th>
@@ -125,7 +125,7 @@
                     </div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Menengah Atas</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="SDM_Table_SMA">
                           <thead>
                             <tr>
                               <th>No</th>
@@ -157,347 +157,38 @@
                     <div class="divider my-0 mx-32"></div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Dasar</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="Sanitasi_SD" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th class="w-[5%]">No</th>
-                                    <th class="w-[15%]">Nama Sekolah</th>
-                                    <th class="w-[20%]">Variabel</th>
-                                    <th class="w-[10%]">Data</th>
-                                    <th class="w-[50%]">Keterangan</th>
+                                    <th></th>
+                                    <th>Nama Sekolah</th>
+                                    <th>Bidang Pendidikan</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach($basis_data_sd as $sd)
-                                <tr class="hover">
-                                    <td rowspan="10" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="10" class="text-left align-top whitespace-pre-line">{{ $sd->school }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Jumlah Toilet</td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->C1 }}</td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_C1 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersedian Air di Toilet</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->C2 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->C2 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_C2 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Sabun Cuci Tangan di Toilet</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->C3 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->C3 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_C3 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Disinfektan Toilet</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->C4 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->C4 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_C4 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Tempat Cuci Tangan di Depan Kelas</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->C5 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->C5 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_C5 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Handsanitizer</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->C6 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->C6 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_C6 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Thermogun</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->C7 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->C7 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_C7 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Masker</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->C8 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->C8 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_C8 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Ketaatan Penggunaan Masker</td>
-                                    <td class="text-left align-top border-b">
-                                        @if($sd->C9 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->C9 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $sd->desc_C9 }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
                         </table>
                     </div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Mengegah Pertama</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="Sanitasi_SMP" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th class="w-[5%]">No</th>
-                                    <th class="w-[15%]">Nama Sekolah</th>
-                                    <th class="w-[20%]">Variabel</th>
-                                    <th class="w-[10%]">Data</th>
-                                    <th class="w-[50%]">Keterangan</th>
+                                    <th></th>
+                                    <th>Nama Sekolah</th>
+                                    <th>Bidang Pendidikan</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach($basis_data_smp as $smp)
-                                <tr class="hover">
-                                    <td rowspan="10" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="10" class="text-left align-top whitespace-pre-line">{{ $smp->school }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Jumlah Toilet</td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->C1 }}</td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_C1 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersedian Air di Toilet</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->C2 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->C2 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_C2 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Sabun Cuci Tangan di Toilet</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->C3 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->C3 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_C3 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Disinfektan Toilet</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->C4 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->C4 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_C4 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Tempat Cuci Tangan di Depan Kelas</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->C5 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->C5 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_C5 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Handsanitizer</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->C6 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->C6 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_C6 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Thermogun</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->C7 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->C7 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_C7 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Masker</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->C8 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->C8 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_C8 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Ketaatan Penggunaan Masker</td>
-                                    <td class="text-left align-top border-b">
-                                        @if($smp->C9 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->C9 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $smp->desc_C9 }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
                         </table>
                     </div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Menengah Atas</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="Sanitasi_SMA" style="width:100%">
                             <thead>
                                 <tr>
-                                    <th class="w-[5%]">No</th>
-                                    <th class="w-[15%]">Nama Sekolah</th>
-                                    <th class="w-[20%]">Variabel</th>
-                                    <th class="w-[10%]">Data</th>
-                                    <th class="w-[50%]">Keterangan</th>
+                                    <th></th>
+                                    <th>Nama Sekolah</th>
+                                    <th>Bidang Pendidikan</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach($basis_data_sma as $sma)
-                                <tr class="hover">
-                                    <td rowspan="10" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="10" class="text-left align-top whitespace-pre-line">{{ $sma->school }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Jumlah Toilet</td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->C1 }}</td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_C1 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersedian Air di Toilet</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->C2 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->C2 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_C2 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Sabun Cuci Tangan di Toilet</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->C3 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->C3 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_C3 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Disinfektan Toilet</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->C4 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->C4 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_C4 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Tempat Cuci Tangan di Depan Kelas</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->C5 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->C5 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_C5 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Handsanitizer</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->C6 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->C6 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_C6 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Thermogun</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->C7 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->C7 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_C7 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Masker</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->C8 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->C8 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_C8 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Ketaatan Penggunaan Masker</td>
-                                    <td class="text-left align-top border-b">
-                                        @if($sma->C9 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->C9 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $sma->desc_C9 }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
                         </table>
                     </div>
                     <div class="divider my-0"></div>
@@ -509,266 +200,38 @@
                     <div class="divider my-0 mx-32"></div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Dasar</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="Kebijakan_Covid_SD" style="width: 100%;">
                             <thead>
                                 <tr>
-                                    <th class="w-[5%]">No</th>
-                                    <th class="w-[15%]">Nama Sekolah</th>
-                                    <th class="w-[20%]">Variabel</th>
-                                    <th class="w-[10%]">Data</th>
-                                    <th class="w-[50%]">Keterangan</th>
+                                    <th></th>
+                                    <th>Nama Sekolah</th>
+                                    <th>Bidang Pendidikan</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach($basis_data_sd as $sd)
-                                <tr class="hover">
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $sd->school }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Satgas Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->D1 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->D1 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_D1 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Sosialisasi Protokol Kesehatan</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->D2 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->D2 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_D2 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Prosedur Penanganan Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->D3 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->D3 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_D3 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Media Informasi Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->D4 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->D4 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_D4 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Peraturan/Tata Tertib Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->D5 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->D5 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_D5 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Ketersediaan Kantin Sehat</td>
-                                    <td class="text-left align-top border-b">
-                                        @if($sd->D6 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->D6 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $sd->desc_D6 }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
                         </table>
                     </div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Mengegah Pertama</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="Kebijakan_Covid_SMP" style="width: 100%;">
                             <thead>
                                 <tr>
-                                    <th class="w-[5%]">No</th>
-                                    <th class="w-[15%]">Nama Sekolah</th>
-                                    <th class="w-[20%]">Variabel</th>
-                                    <th class="w-[10%]">Data</th>
-                                    <th class="w-[50%]">Keterangan</th>
+                                    <th></th>
+                                    <th>Nama Sekolah</th>
+                                    <th>Bidang Pendidikan</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach($basis_data_smp as $smp)
-                                <tr class="hover">
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $smp->school }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Satgas Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->D1 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->D1 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_D1 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Sosialisasi Protokol Kesehatan</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->D2 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->D2 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_D2 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Prosedur Penanganan Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->D3 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->D3 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_D3 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Media Informasi Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->D4 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->D4 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_D4 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Peraturan/Tata Tertib Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->D5 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->D5 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_D5 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Ketersediaan Kantin Sehat</td>
-                                    <td class="text-left align-top border-b">
-                                        @if($smp->D6 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->D6 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $smp->desc_D6 }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
                         </table>
                     </div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Menengah Atas</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="Kebijakan_Covid_SMA" style="width: 100%;">
                             <thead>
                                 <tr>
-                                    <th class="w-[5%]">No</th>
-                                    <th class="w-[15%]">Nama Sekolah</th>
-                                    <th class="w-[20%]">Variabel</th>
-                                    <th class="w-[10%]">Data</th>
-                                    <th class="w-[50%]">Keterangan</th>
+                                    <th></th>
+                                    <th>Nama Sekolah</th>
+                                    <th>Bidang Pendidikan</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach($basis_data_sma as $sma)
-                                <tr class="hover">
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="7" class="text-left align-top whitespace-pre-line">{{ $sma->school }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Satgas Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->D1 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->D1 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_D1 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Sosialisasi Protokol Kesehatan</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->D2 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->D2 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_D2 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Prosedur Penanganan Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->D3 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->D3 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_D3 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Media Informasi Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->D4 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->D4 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_D4 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Ketersediaan Peraturan/Tata Tertib Covid-19</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->D5 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->D5 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_D5 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Ketersediaan Kantin Sehat</td>
-                                    <td class="text-left align-top border-b">
-                                        @if($sma->D6 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->D6 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $sma->desc_D6 }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
                         </table>
                     </div>
                     <div class="divider my-0"></div>
@@ -780,167 +243,38 @@
                     <div class="divider my-0 mx-32"></div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Dasar</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="Data_Covid_SD" style="width: 100%;">
                             <thead>
                                 <tr>
-                                    <th class="w-[5%]">No</th>
-                                    <th class="w-[15%]">Nama Sekolah</th>
-                                    <th class="w-[20%]">Variabel</th>
-                                    <th class="w-[10%]">Data</th>
-                                    <th class="w-[50%]">Keterangan</th>
+                                    <th></th>
+                                    <th>Nama Sekolah</th>
+                                    <th>Bidang Pendidikan</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach($basis_data_sd as $sd)
-                                <tr class="hover">
-                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $sd->school }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Data Covid-19 Setahun Terakhir</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->E1 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->E1 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_E1 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Jumlah dan Sebaran Kasus per Bulan</td>
-                                    <td class="text-left align-top">
-                                        @if($sd->E2 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->E2 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sd->desc_E2 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Pemusatan Covid-19 pada Kelas Tertentu</td>
-                                    <td class="text-left align-top border-b">
-                                        @if($sd->E3 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sd->E3 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $sd->desc_E3 }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
                         </table>
                     </div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Mengegah Pertama</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="Data_Covid_SMP" style="width: 100%;">
                             <thead>
                                 <tr>
-                                    <th class="w-[5%]">No</th>
-                                    <th class="w-[15%]">Nama Sekolah</th>
-                                    <th class="w-[20%]">Variabel</th>
-                                    <th class="w-[10%]">Data</th>
-                                    <th class="w-[50%]">Keterangan</th>
+                                    <th></th>
+                                    <th>Nama Sekolah</th>
+                                    <th>Bidang Pendidikan</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach($basis_data_smp as $smp)
-                                <tr class="hover">
-                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $smp->school }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Data Covid-19 Setahun Terakhir</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->E1 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->E1 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_E1 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Jumlah dan Sebaran Kasus per Bulan</td>
-                                    <td class="text-left align-top">
-                                        @if($smp->E2 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->E2 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $smp->desc_E2 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-left-radius: 0">Pemusatan Covid-19 pada Kelas Tertentu</td>
-                                    <td class="text-left align-top border-b">
-                                        @if($smp->E3 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($smp->E3 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $smp->desc_E3 }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
                         </table>
                     </div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Menengah Atas</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full">
+                        <table class="table table-compact w-full" id="Data_Covid_SMA" style="width: 100%;">
                             <thead>
                                 <tr>
-                                    <th class="w-[5%]">No</th>
-                                    <th class="w-[15%]">Nama Sekolah</th>
-                                    <th class="w-[20%]">Variabel</th>
-                                    <th class="w-[10%]">Data</th>
-                                    <th class="w-[50%]">Keterangan</th>
+                                    <th></th>
+                                    <th>Nama Sekolah</th>
+                                    <th>Bidang Pendidikan</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                @foreach($basis_data_sma as $sma)
-                                <tr class="hover">
-                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $loop->iteration }}</td>
-                                    <td rowspan="4" class="text-left align-top whitespace-pre-line">{{ $sma->school }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Data Covid-19 Setahun Terakhir</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->E1 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->E1 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_E1 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line">Jumlah dan Sebaran Kasus per Bulan</td>
-                                    <td class="text-left align-top">
-                                        @if($sma->E2 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->E2 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line">{{ $sma->desc_E2 }}</td>
-                                </tr>
-                                <tr class="hover">
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">Pemusatan Covid-19 pada Kelas Tertentu</td>
-                                    <td class="text-left align-top border-b">
-                                        @if($sma->E3 == 'Ya')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path></svg>
-                                        @elseif($sma->E3 == 'Tidak')
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;"><path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path></svg>
-                                        @endif
-                                    </td>
-                                    <td class="text-left align-top whitespace-pre-line border-b" style="border-bottom-right-radius: 0">{{ $sma->desc_E3 }}</td>
-                                </tr>
-                                @endforeach
-                            </tbody>
                         </table>
                     </div>
                     <div class="divider my-0"></div>
@@ -1069,6 +403,560 @@
             {label: 'Batas', data: batas_sma, type: 'line', order: 1, fill: false, backgroundColor: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)'}
         ]
     },options: {scales: {y: {beginAtZero: true}},}});
+</script>
+
+<script>
+    $(document).ready( function () {
+        $('#SDM_Table_SD').DataTable();
+        $('#SDM_Table_SMP').DataTable();
+        $('#SDM_Table_SMA').DataTable();
+    } );
+</script>
+
+{{-- Sanitasi --}}
+<script>
+    function format_sanitasi(data_sanitasi){
+        return (
+            '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+            '<tr>' + 
+                '<th class="text-left align-top whitespace-pre-line">Variabel</th>' +
+                '<th class="text-left align-top whitespace-pre-line">Data</th>' +  
+                '<th class="text-left align-top whitespace-pre-line">Keterangan</th>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Jumlah Toilet :</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C1 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C1 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketersedian Air di Toilet:</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_sanitasi.C2 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C2 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Sabun Cuci Tangan di Toilet:</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_sanitasi.C3 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C3 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Disinfektan Toilet:</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_sanitasi.C4 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C4 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Tempat Cuci Tangan di Depan Kelas:</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_sanitasi.C5 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C5 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Handsanitizer:</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_sanitasi.C6 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C6 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Thermogun:</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_sanitasi.C7 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C7 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Masker:</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_sanitasi.C8 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C8 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketaatan Penggunaan Masker:</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_sanitasi.C9 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C9 + '</td>' + 
+            '</tr>' +
+            '</table>'
+        );
+    }
+    
+    $(document).ready(function () {
+        var sanitasi_sd = $('#Sanitasi_SD').DataTable({
+            data: {!! json_encode($basis_data_sd->toArray(), JSON_HEX_TAG) !!},
+            columns: [
+                {
+                    className: 'dt-control',
+                    orderable: false,
+                    data: null,
+                    defaultContent: '',
+                },
+                { data: 'school' },
+                { data: 'bp' },
+            ],
+            order: [[1, 'asc']],
+        });
+    
+        $('#Sanitasi_SD tbody').on('click', 'td.dt-control', function () {
+            var tr = $(this).closest('tr');
+            var row = sanitasi_sd.row(tr);
+    
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open this row
+                row.child(format_sanitasi(row.data())).show();
+                tr.addClass('shown');
+            }
+        });
+        
+        var sanitasi_smp = $('#Sanitasi_SMP').DataTable({
+            data: {!! json_encode($basis_data_smp->toArray(), JSON_HEX_TAG) !!},
+            columns: [
+                {
+                    className: 'dt-control',
+                    orderable: false,
+                    data: null,
+                    defaultContent: '',
+                },
+                { data: 'school' },
+                { data: 'bp' },
+            ],
+            order: [[1, 'asc']],
+        });
+    
+        $('#Sanitasi_SMP tbody').on('click', 'td.dt-control', function () {
+            var tr = $(this).closest('tr');
+            var row = sanitasi_smp.row(tr);
+    
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open this row
+                row.child(format_sanitasi(row.data())).show();
+                tr.addClass('shown');
+            }
+        });
+
+        var sanitasi_sma = $('#Sanitasi_SMA').DataTable({
+            data: {!! json_encode($basis_data_sma->toArray(), JSON_HEX_TAG) !!},
+            columns: [
+                {
+                    className: 'dt-control',
+                    orderable: false,
+                    data: null,
+                    defaultContent: '',
+                },
+                { data: 'school' },
+                { data: 'bp' },
+            ],
+            order: [[1, 'asc']],
+        });
+    
+        $('#Sanitasi_SMA tbody').on('click', 'td.dt-control', function () {
+            var tr = $(this).closest('tr');
+            var row = sanitasi_sma.row(tr);
+    
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open this row
+                row.child(format_sanitasi(row.data())).show();
+                tr.addClass('shown');
+            }
+        });
+    });
+</script>
+
+{{-- Kebijakan Covid-19 --}}
+<script>
+    function format_kebijakan_covid(data_kebijakan_covid){
+        return (
+            '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+            '<tr>' + 
+                '<th class="text-left align-top whitespace-pre-line">Variabel</th>' +
+                '<th class="text-left align-top whitespace-pre-line">Data</th>' +  
+                '<th class="text-left align-top whitespace-pre-line">Keterangan</th>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Satgas Covid-19</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_kebijakan_covid.D1 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D1 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Sosialisasi Protokol Kesehatan</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_kebijakan_covid.D2 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D2 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Prosedur Penanganan Covid-19</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_kebijakan_covid.D3 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D3 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Media Informasi Covid-19</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_kebijakan_covid.D4 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D4 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Peraturan/Tata Tertib Covid-19</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_kebijakan_covid.D5 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D5 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Kantin Sehat</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_kebijakan_covid.D6 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D6 + '</td>' + 
+            '</tr>' +
+            '</table>'
+        );
+    }
+    
+    $(document).ready(function () {
+        var kebijakan_covid_sd = $('#Kebijakan_Covid_SD').DataTable({
+            data: {!! json_encode($basis_data_sd->toArray(), JSON_HEX_TAG) !!},
+            columns: [
+                {
+                    className: 'dt-control',
+                    orderable: false,
+                    data: null,
+                    defaultContent: '',
+                },
+                { data: 'school' },
+                { data: 'bp' },
+            ],
+            order: [[1, 'asc']],
+        });
+    
+        $('#Kebijakan_Covid_SD tbody').on('click', 'td.dt-control', function () {
+            var tr = $(this).closest('tr');
+            var row = kebijakan_covid_sd.row(tr);
+    
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open this row
+                row.child(format_kebijakan_covid(row.data())).show();
+                tr.addClass('shown');
+            }
+        });
+        
+        var kebijakan_covid_smp = $('#Kebijakan_Covid_SMP').DataTable({
+            data: {!! json_encode($basis_data_smp->toArray(), JSON_HEX_TAG) !!},
+            columns: [
+                {
+                    className: 'dt-control',
+                    orderable: false,
+                    data: null,
+                    defaultContent: '',
+                },
+                { data: 'school' },
+                { data: 'bp' },
+            ],
+            order: [[1, 'asc']],
+        });
+    
+        $('#Kebijakan_Covid_SMP tbody').on('click', 'td.dt-control', function () {
+            var tr = $(this).closest('tr');
+            var row = kebijakan_covid_smp.row(tr);
+    
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open this row
+                row.child(format_kebijakan_covid(row.data())).show();
+                tr.addClass('shown');
+            }
+        });
+
+        var kebijakan_covid_sma = $('#Kebijakan_Covid_SMA').DataTable({
+            data: {!! json_encode($basis_data_sma->toArray(), JSON_HEX_TAG) !!},
+            columns: [
+                {
+                    className: 'dt-control',
+                    orderable: false,
+                    data: null,
+                    defaultContent: '',
+                },
+                { data: 'school' },
+                { data: 'bp' },
+            ],
+            order: [[1, 'asc']],
+        });
+    
+        $('#Kebijakan_Covid_SMA tbody').on('click', 'td.dt-control', function () {
+            var tr = $(this).closest('tr');
+            var row = kebijakan_covid_sma.row(tr);
+    
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open this row
+                row.child(format_kebijakan_covid(row.data())).show();
+                tr.addClass('shown');
+            }
+        });
+    });
+</script>
+
+{{-- Data Covid-19 --}}
+<script>
+    function format_data_covid(data_covid){
+        return (
+            '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+            '<tr>' + 
+                '<th class="text-left align-top whitespace-pre-line">Variabel</th>' +
+                '<th class="text-left align-top whitespace-pre-line">Data</th>' +  
+                '<th class="text-left align-top whitespace-pre-line">Keterangan</th>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Data Covid-19 Setahun Terakhir</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + data_covid.E1 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line">' + data_covid.desc_E1 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Jumlah dan Sebaran Kasus per Bulan</td>' +
+                '<td class="text-left align-top whitespace-pre-line">' + data_covid.E2 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line">' + data_covid.desc_E2 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line">Pemusatan Covid-19 pada Kelas Tertentu</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_covid.E3 == 'Ya' ? 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
+                    '</svg>' : 
+                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
+                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
+                    '</svg>'
+                    ) +
+                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_covid.desc_E3 + '</td>' + 
+            '</tr>' +
+            '</table>'
+        );
+    }
+    
+    $(document).ready(function () {
+        var data_covid_sd = $('#Data_Covid_SD').DataTable({
+            data: {!! json_encode($basis_data_sd->toArray(), JSON_HEX_TAG) !!},
+            columns: [
+                {
+                    className: 'dt-control',
+                    orderable: false,
+                    data: null,
+                    defaultContent: '',
+                },
+                { data: 'school' },
+                { data: 'bp' },
+            ],
+            order: [[1, 'asc']],
+        });
+    
+        $('#Data_Covid_SD tbody').on('click', 'td.dt-control', function () {
+            var tr = $(this).closest('tr');
+            var row = data_covid_sd.row(tr);
+    
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open this row
+                row.child(format_data_covid(row.data())).show();
+                tr.addClass('shown');
+            }
+        });
+        
+        var data_covid_smp = $('#Data_Covid_SMP').DataTable({
+            data: {!! json_encode($basis_data_smp->toArray(), JSON_HEX_TAG) !!},
+            columns: [
+                {
+                    className: 'dt-control',
+                    orderable: false,
+                    data: null,
+                    defaultContent: '',
+                },
+                { data: 'school' },
+                { data: 'bp' },
+            ],
+            order: [[1, 'asc']],
+        });
+    
+        $('#Data_Covid_SMP tbody').on('click', 'td.dt-control', function () {
+            var tr = $(this).closest('tr');
+            var row = data_covid_smp.row(tr);
+    
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open this row
+                row.child(format_data_covid(row.data())).show();
+                tr.addClass('shown');
+            }
+        });
+
+        var data_covid_sma = $('#Data_Covid_SMA').DataTable({
+            data: {!! json_encode($basis_data_sma->toArray(), JSON_HEX_TAG) !!},
+            columns: [
+                {
+                    className: 'dt-control',
+                    orderable: false,
+                    data: null,
+                    defaultContent: '',
+                },
+                { data: 'school' },
+                { data: 'bp' },
+            ],
+            order: [[1, 'asc']],
+        });
+    
+        $('#Data_Covid_SMA tbody').on('click', 'td.dt-control', function () {
+            var tr = $(this).closest('tr');
+            var row = data_covid_sma.row(tr);
+    
+            if (row.child.isShown()) {
+                // This row is already open - close it
+                row.child.hide();
+                tr.removeClass('shown');
+            } else {
+                // Open this row
+                row.child(format_data_covid(row.data())).show();
+                tr.addClass('shown');
+            }
+        });
+    });
 </script>
 
 @endsection

@@ -44,7 +44,6 @@ class MainController extends Controller
 
     public function statistics()
     {
-        // dd(Infrastructure::KepadatanSMP());
         $data = [
             Infrastructure::LuasSekolahSD()->values(),
             Infrastructure::LuasSekolahSMP()->values(),
@@ -95,6 +94,7 @@ class MainController extends Controller
             $batas_SMA[$i] = 36;
         }
 
+        // dd(Infrastructure::Basis_Data_SD()->get());
         return view('main.statistics', [
             'title' => 'Statistik Data Kesehatan Sekolah | Sistem Basis Data Sekolah',
             'setting' => Setting::all(),

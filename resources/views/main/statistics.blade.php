@@ -430,114 +430,42 @@
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersedian Air di Toilet:</td>' + 
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_sanitasi.C2 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C2 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C2 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Sabun Cuci Tangan di Toilet:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_sanitasi.C3 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C3 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C3 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Disinfektan Toilet:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_sanitasi.C4 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C4 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C4 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Tempat Cuci Tangan di Depan Kelas:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_sanitasi.C5 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C5 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C5 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Handsanitizer:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_sanitasi.C6 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C6 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C6 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Thermogun:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_sanitasi.C7 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C7 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C7 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Masker:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_sanitasi.C8 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C8 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C8 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketaatan Penggunaan Masker:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_sanitasi.C9 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C9 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C9 + '</td>' + 
             '</tr>' +
             '</table>'
@@ -649,86 +577,32 @@
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Satgas Covid-19</td>' + 
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_kebijakan_covid.D1 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D1 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D1 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Sosialisasi Protokol Kesehatan</td>' + 
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_kebijakan_covid.D2 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D2 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D2 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Prosedur Penanganan Covid-19</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_kebijakan_covid.D3 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D3 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D3 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Media Informasi Covid-19</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_kebijakan_covid.D4 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D4 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D4 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Peraturan/Tata Tertib Covid-19</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_kebijakan_covid.D5 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D5 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D5 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Kantin Sehat</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_kebijakan_covid.D6 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D6 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D6 + '</td>' + 
             '</tr>' +
             '</table>'
@@ -850,16 +724,7 @@
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Pemusatan Covid-19 pada Kelas Tertentu</td>' + 
-                '<td class="text-left align-top whitespace-pre-line">' + 
-                    (data_covid.E3 == 'Ya' ? 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(34, 197, 94, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm-1.999 14.413-3.713-3.705L7.7 11.292l2.299 2.295 5.294-5.294 1.414 1.414-6.706 6.706z"></path>' +
-                    '</svg>' : 
-                    '<svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" style="fill: rgba(239, 68, 68, 1);transform: ;msFilter:;">' +
-                        '<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm4.207 12.793-1.414 1.414L12 13.414l-2.793 2.793-1.414-1.414L10.586 12 7.793 9.207l1.414-1.414L12 10.586l2.793-2.793 1.414 1.414L13.414 12l2.793 2.793z"></path>' +
-                    '</svg>'
-                    ) +
-                '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line">' + data_covid.E3 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_covid.desc_E3 + '</td>' + 
             '</tr>' +
             '</table>'

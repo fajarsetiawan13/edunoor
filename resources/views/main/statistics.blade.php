@@ -18,6 +18,7 @@
                     <option id="graph-5" value="5">Kebijakan Covid-19</option>
                     <option id="graph-6" value="6">Data Covid-19</option>
                     <option id="graph-7" value="7">Kepadatan Kelas</option>
+                    <option id="graph-8" value="8">Kepadatan Populasi Sekolah</option>
                 </select>
                 <div class="" id="select-content">
                     <span class="flex justify-center font-semibold text-lg md:text-xl">Masa Pemantauan</span>
@@ -284,14 +285,36 @@
                 <div class="hidden" id="select-content">
                     <span class="flex justify-center font-semibold text-lg md:text-xl">Kepadatan Kelas</span>
                     <div class="divider my-0 mx-32"></div>
+                    <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Dasar</span>
                     <div class="mb-3">
                         <canvas id="kepadatan_siswa_SD" class="w-full"></canvas>
                     </div>
+                    <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Mengegah Pertama</span>
                     <div class="mb-3">
                         <canvas id="kepadatan_siswa_SMP" class="w-full"></canvas>
                     </div>
+                    <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Mengegah Atas</span>
                     <div class="mb-3">
                         <canvas id="kepadatan_siswa_SMA" class="w-full"></canvas>
+                    </div>
+                    <div class="divider my-0"></div>
+                </div>
+
+                {{-- Kepadatan Populasi Sekolah --}}
+                <div class="hidden" id="select-content">
+                    <span class="flex justify-center font-semibold text-lg md:text-xl">Kepadatan Populasi Sekolah</span>
+                    <div class="divider my-0 mx-32"></div>
+                    <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Dasar</span>
+                    <div class="mb-3">
+                        <canvas id="kepadatan_populasi_SD" class="w-full"></canvas>
+                    </div>
+                    <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Mengegah Pertama</span>
+                    <div class="mb-3">
+                        <canvas id="kepadatan_populasi_SMP" class="w-full"></canvas>
+                    </div>
+                    <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Mengegah Atas</span>
+                    <div class="mb-3">
+                        <canvas id="kepadatan_populasi_SMA" class="w-full"></canvas>
                     </div>
                     <div class="divider my-0"></div>
                 </div>
@@ -376,6 +399,7 @@
         ]
     }, options: {scales: {y: {beginAtZero: true}},}});
     
+    // Kepadatan Kelas //
     const ctx_kepadatan_sd = document.getElementById('kepadatan_siswa_SD');
     const ctx_kepadatan_smp = document.getElementById('kepadatan_siswa_SMP');
     const ctx_kepadatan_sma = document.getElementById('kepadatan_siswa_SMA');
@@ -386,21 +410,47 @@
     new Chart(ctx_kepadatan_sd, {type: 'bar', data: {labels: labels_sd, 
         datasets: [
             {label: 'Kepadatan Kelas SD', data: data_kepadatan_sd, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1}, 
-            {label: 'Batas', data: batas_sd, type: 'line', order: 1, fill: false, backgroundColor: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)'}
+            // {label: 'Batas', data: batas_sd, type: 'line', order: 1, fill: false, backgroundColor: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)'}
         ]
     },options: {scales: {y: {beginAtZero: true}},}});
 
     new Chart(ctx_kepadatan_smp, {type: 'bar', data: {labels: labels_smp, 
         datasets: [
             {label: 'Kepadatan Kelas SMP', data: data_kepadatan_smp, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1}, 
-            {label: 'Batas', data: batas_smp, type: 'line', order: 1, fill: false, backgroundColor: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)'}
+            // {label: 'Batas', data: batas_smp, type: 'line', order: 1, fill: false, backgroundColor: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)'}
         ]
     },options: {scales: {y: {beginAtZero: true}},}});
 
     new Chart(ctx_kepadatan_sma, {type: 'bar', data: {labels: labels_sma, 
         datasets: [
             {label: 'Kepadatan Kelas SMA', data: data_kepadatan_sma, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1}, 
-            {label: 'Batas', data: batas_sma, type: 'line', order: 1, fill: false, backgroundColor: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)'}
+            // {label: 'Batas', data: batas_sma, type: 'line', order: 1, fill: false, backgroundColor: 'rgba(239, 68, 68, 0.3)', borderColor: 'rgba(239, 68, 68, 1)'}
+        ]
+    },options: {scales: {y: {beginAtZero: true}},}});
+    
+    // Kepadatan Populasi Sekolah //
+    const ctx_kepadatan_populasi_sd = document.getElementById('kepadatan_populasi_SD');
+    const ctx_kepadatan_populasi_smp = document.getElementById('kepadatan_populasi_SMP');
+    const ctx_kepadatan_populasi_sma = document.getElementById('kepadatan_populasi_SMA');
+    var labels_populasi_sd = {{ Js::from($labels_kepadatan_populasi_SD) }}, data_kepadatan_populasi_sd = {{ Js::from($kepadatan_populasi_SD) }};
+    var labels_populasi_smp = {{ Js::from($labels_kepadatan_populasi_SMP) }}, data_kepadatan_populasi_smp = {{ Js::from($kepadatan_populasi_SMP) }};
+    var labels_populasi_sma = {{ Js::from($labels_kepadatan_populasi_SMA) }}, data_kepadatan_populasi_sma = {{ Js::from($kepadatan_populasi_SMA) }};
+   
+    new Chart(ctx_kepadatan_populasi_sd, {type: 'bar', data: {labels: labels_populasi_sd, 
+        datasets: [
+            {label: 'Kepadatan Populasi SD', data: data_kepadatan_populasi_sd, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1},
+        ]
+    },options: {scales: {y: {beginAtZero: true}},}});
+
+    new Chart(ctx_kepadatan_populasi_smp, {type: 'bar', data: {labels: labels_populasi_smp, 
+        datasets: [
+            {label: 'Kepadatan Populasi SMP', data: data_kepadatan_populasi_smp, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1},
+        ]
+    },options: {scales: {y: {beginAtZero: true}},}});
+
+    new Chart(ctx_kepadatan_populasi_sma, {type: 'bar', data: {labels: labels_populasi_sma, 
+        datasets: [
+            {label: 'Kepadatan Populasi SMA', data: data_kepadatan_populasi_sma, backgroundColor: 'rgba(14, 165, 233, 0.3)', borderColor: 'rgba(14, 165, 233, 1', borderWidth: 1},
         ]
     },options: {scales: {y: {beginAtZero: true}},}});
 </script>
@@ -435,22 +485,30 @@
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Sabun Cuci Tangan di Toilet:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C3 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    ((data_sanitasi.C3 / data_sanitasi.A3) >= 1 ? 'Baik' : 'Tidak Baik') + 
+                '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C3 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Disinfektan Toilet:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C4 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (data_sanitasi.C4 > 0 ? 'Baik' : 'Tidak Baik') + 
+                '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C4 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Tempat Cuci Tangan di Depan Kelas:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C5 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    ((data_sanitasi.C5 / data_sanitasi.A3) >= 1 ? 'Baik' : 'Tidak Baik') + 
+                '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C5 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Handsanitizer:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C6 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    ((data_sanitasi.C6 / data_sanitasi.A3) >= 1 ? 'Baik' : 'Tidak Baik') + 
+                '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C6 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
@@ -460,7 +518,9 @@
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line">Ketersediaan Masker:</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.C8 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line">' + 
+                    (((data_sanitasi.C8 / data_sanitasi.B2) * 100) >= 50 ? 'Baik' : 'Tidak Baik')+ 
+                '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line">' + data_sanitasi.desc_C8 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 

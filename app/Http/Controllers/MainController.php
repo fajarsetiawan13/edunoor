@@ -63,6 +63,9 @@ class MainController extends Controller
             Infrastructure::KepadatanSD()->values(),
             Infrastructure::KepadatanSMP()->values(),
             Infrastructure::KepadatanSMA()->values(),
+            Infrastructure::KepadatanPopulasiSD()->values(),
+            Infrastructure::KepadatanPopulasiSMP()->values(),
+            Infrastructure::KepadatanPopulasiSMA()->values(),
         ];
         $labels = [
             Infrastructure::LuasSekolahSD()->keys(),
@@ -83,6 +86,9 @@ class MainController extends Controller
             Infrastructure::KepadatanSD()->keys(),
             Infrastructure::KepadatanSMP()->keys(),
             Infrastructure::KepadatanSMA()->keys(),
+            Infrastructure::KepadatanPopulasiSD()->keys(),
+            Infrastructure::KepadatanPopulasiSMP()->keys(),
+            Infrastructure::KepadatanPopulasiSMA()->keys(),
         ];
         for ($i = 0; $i < count($data[0]); $i++) {
             $batas_SD[$i] = 28;
@@ -119,6 +125,9 @@ class MainController extends Controller
             'labels_kepadatan_SD' => $labels[15], 'kepadatan_SD' => $data[15], 'batas_SD' => $batas_SD,
             'labels_kepadatan_SMP' => $labels[16], 'kepadatan_SMP' => $data[16], 'batas_SMP' => $batas_SMP,
             'labels_kepadatan_SMA' => $labels[17], 'kepadatan_SMA' => $data[17], 'batas_SMA' => $batas_SMA,
+            'labels_kepadatan_populasi_SD' => $labels[18], 'kepadatan_populasi_SD' => $data[18],
+            'labels_kepadatan_populasi_SMP' => $labels[19], 'kepadatan_populasi_SMP' => $data[19],
+            'labels_kepadatan_populasi_SMA' => $labels[20], 'kepadatan_populasi_SMA' => $data[20],
         ]);
     }
 

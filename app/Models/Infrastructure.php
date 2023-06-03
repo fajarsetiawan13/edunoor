@@ -154,7 +154,7 @@ class Infrastructure extends Model
     public function scopeKepadatanSD()
     {
         $data = DB::table('infrastructures')
-            ->select('infrastructures.id', 'schools.name as school', 'schools.bp as bp', DB::raw('infrastructures.B2 / infrastructures.A3 as answer'))
+            ->select('infrastructures.id', 'schools.name as school', 'schools.bp as bp', DB::raw('(infrastructures.B2 / infrastructures.A3) / infrastructures.A4 as answer'))
             ->where('infrastructures.school_bp', '=', 'SD')
             ->join('schools', 'schools.id', '=', 'infrastructures.school_id')->pluck('answer', 'school');
         return $data;
@@ -163,7 +163,7 @@ class Infrastructure extends Model
     public function scopeKepadatanSMP()
     {
         $data = DB::table('infrastructures')
-            ->select('infrastructures.id', 'schools.name as school', 'schools.bp as bp', DB::raw('infrastructures.B2 / infrastructures.A3 as answer'))
+            ->select('infrastructures.id', 'schools.name as school', 'schools.bp as bp', DB::raw('(infrastructures.B2 / infrastructures.A3) / infrastructures.A4 as answer'))
             ->where('infrastructures.school_bp', '=', 'SMP')
             ->join('schools', 'schools.id', '=', 'infrastructures.school_id')->pluck('answer', 'school');
         return $data;
@@ -172,7 +172,34 @@ class Infrastructure extends Model
     public function scopeKepadatanSMA()
     {
         $data = DB::table('infrastructures')
-            ->select('infrastructures.id', 'schools.name as school', 'schools.bp as bp', DB::raw('infrastructures.B2 / infrastructures.A3 as answer'))
+            ->select('infrastructures.id', 'schools.name as school', 'schools.bp as bp', DB::raw('(infrastructures.B2 / infrastructures.A3) / infrastructures.A4 as answer'))
+            ->where('infrastructures.school_bp', '=', 'SMA')
+            ->join('schools', 'schools.id', '=', 'infrastructures.school_id')->pluck('answer', 'school');
+        return $data;
+    }
+
+    public function scopeKepadatanPopulasiSD()
+    {
+        $data = DB::table('infrastructures')
+            ->select('infrastructures.id', 'schools.name as school', 'schools.bp as bp', DB::raw('(infrastructures.B1 + infrastructures.B2 + infrastructures.B3) / infrastructures.A1 as answer'))
+            ->where('infrastructures.school_bp', '=', 'SD')
+            ->join('schools', 'schools.id', '=', 'infrastructures.school_id')->pluck('answer', 'school');
+        return $data;
+    }
+
+    public function scopeKepadatanPopulasiSMP()
+    {
+        $data = DB::table('infrastructures')
+            ->select('infrastructures.id', 'schools.name as school', 'schools.bp as bp', DB::raw('(infrastructures.B1 + infrastructures.B2 + infrastructures.B3) / infrastructures.A1 as answer'))
+            ->where('infrastructures.school_bp', '=', 'SMP')
+            ->join('schools', 'schools.id', '=', 'infrastructures.school_id')->pluck('answer', 'school');
+        return $data;
+    }
+
+    public function scopeKepadatanPopulasiSMA()
+    {
+        $data = DB::table('infrastructures')
+            ->select('infrastructures.id', 'schools.name as school', 'schools.bp as bp', DB::raw('(infrastructures.B1 + infrastructures.B2 + infrastructures.B3) / infrastructures.A1 as answer'))
             ->where('infrastructures.school_bp', '=', 'SMA')
             ->join('schools', 'schools.id', '=', 'infrastructures.school_id')->pluck('answer', 'school');
         return $data;
@@ -185,6 +212,11 @@ class Infrastructure extends Model
                 'infrastructures.id',
                 'schools.name as school',
                 'schools.bp as bp',
+                'infrastructures.A1 as A1',
+                'infrastructures.A2 as A2',
+                'infrastructures.A3 as A3',
+                'infrastructures.A4 as A4',
+                'infrastructures.A5 as A5',
                 'infrastructures.B1 as B1',
                 'infrastructures.B2 as B2',
                 'infrastructures.B3 as B3',
@@ -206,6 +238,11 @@ class Infrastructure extends Model
                 'infrastructures.E1 as E1',
                 'infrastructures.E2 as E2',
                 'infrastructures.E3 as E3',
+                'infrastructures.explanation_A1 as desc_A1',
+                'infrastructures.explanation_A2 as desc_A2',
+                'infrastructures.explanation_A3 as desc_A3',
+                'infrastructures.explanation_A4 as desc_A4',
+                'infrastructures.explanation_A5 as desc_A5',
                 'infrastructures.explanation_B1 as desc_B1',
                 'infrastructures.explanation_B2 as desc_B2',
                 'infrastructures.explanation_B3 as desc_B3',
@@ -240,6 +277,11 @@ class Infrastructure extends Model
                 'infrastructures.id',
                 'schools.name as school',
                 'schools.bp as bp',
+                'infrastructures.A1 as A1',
+                'infrastructures.A2 as A2',
+                'infrastructures.A3 as A3',
+                'infrastructures.A4 as A4',
+                'infrastructures.A5 as A5',
                 'infrastructures.B1 as B1',
                 'infrastructures.B2 as B2',
                 'infrastructures.B3 as B3',
@@ -261,6 +303,11 @@ class Infrastructure extends Model
                 'infrastructures.E1 as E1',
                 'infrastructures.E2 as E2',
                 'infrastructures.E3 as E3',
+                'infrastructures.explanation_A1 as desc_A1',
+                'infrastructures.explanation_A2 as desc_A2',
+                'infrastructures.explanation_A3 as desc_A3',
+                'infrastructures.explanation_A4 as desc_A4',
+                'infrastructures.explanation_A5 as desc_A5',
                 'infrastructures.explanation_B1 as desc_B1',
                 'infrastructures.explanation_B2 as desc_B2',
                 'infrastructures.explanation_B3 as desc_B3',
@@ -295,6 +342,11 @@ class Infrastructure extends Model
                 'infrastructures.id',
                 'schools.name as school',
                 'schools.bp as bp',
+                'infrastructures.A1 as A1',
+                'infrastructures.A2 as A2',
+                'infrastructures.A3 as A3',
+                'infrastructures.A4 as A4',
+                'infrastructures.A5 as A5',
                 'infrastructures.B1 as B1',
                 'infrastructures.B2 as B2',
                 'infrastructures.B3 as B3',
@@ -316,6 +368,11 @@ class Infrastructure extends Model
                 'infrastructures.E1 as E1',
                 'infrastructures.E2 as E2',
                 'infrastructures.E3 as E3',
+                'infrastructures.explanation_A1 as desc_A1',
+                'infrastructures.explanation_A2 as desc_A2',
+                'infrastructures.explanation_A3 as desc_A3',
+                'infrastructures.explanation_A4 as desc_A4',
+                'infrastructures.explanation_A5 as desc_A5',
                 'infrastructures.explanation_B1 as desc_B1',
                 'infrastructures.explanation_B2 as desc_B2',
                 'infrastructures.explanation_B3 as desc_B3',

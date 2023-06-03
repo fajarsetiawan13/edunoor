@@ -44,8 +44,8 @@
                     <option value="SD">SD</option>
                     <option value="SMP">SMP</option>
                     <option value="SMA">SMA</option>
-                    <option value="SMK">SMK</option>
-                    <option value="SLB">SLB</option>
+                    {{-- <option value="SMK">SMK</option>
+                    <option value="SLB">SLB</option> --}}
                 </select>
                 @error('bp')
                 <span class="invalid-feedback">

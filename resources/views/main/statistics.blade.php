@@ -467,7 +467,7 @@
 <script>
     function format_sanitasi(data_sanitasi){
         return (
-            '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+            '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px; style="width: 100%;"">' +
             '<tr>' + 
                 '<th class="text-left align-top whitespace-pre-line bg-zinc-300" style="border-bottom-left-radius: 0;">Variabel</th>' +
                 '<th class="text-left align-top whitespace-pre-line bg-zinc-300">Data</th>' + 
@@ -533,10 +533,10 @@
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C8 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-left-radius: 0;">Ketaatan Penggunaan Masker:</td>' +
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100"></td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_sanitasi.C9 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-right-radius: 0;">' + data_sanitasi.desc_C9 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0" style="border-top-left-radius: 0;">Ketaatan Penggunaan Masker:</td>' +
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0"></td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0">' + data_sanitasi.C9 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0" style="border-top-right-radius: 0;">' + data_sanitasi.desc_C9 + '</td>' + 
             '</tr>' +
             '</table>'
         );
@@ -639,7 +639,7 @@
 <script>
     function format_kebijakan_covid(data_kebijakan_covid){
         return (
-            '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+            '<table cellpadding="5" cellspacing="0" border="0" style="padding-left: 50px;" style="width: 100%;">' +
             '<tr>' + 
                 '<th class="text-left align-top whitespace-pre-line bg-zinc-300" style="border-bottom-left-radius: 0;">Variabel</th>' +
                 '<th class="text-left align-top whitespace-pre-line bg-zinc-300">Data</th>' +  
@@ -653,7 +653,7 @@
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Sosialisasi Protokol Kesehatan</td>' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_kebijakan_covid.D2 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;>' + data_kebijakan_covid.desc_D2 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_kebijakan_covid.desc_D2 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersediaan Prosedur Penanganan Covid-19</td>' +
@@ -671,9 +671,9 @@
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_kebijakan_covid.desc_D5 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-left-radius: 0;">Ketersediaan Kantin Sehat</td>' +
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_kebijakan_covid.D6 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-right-radius: 0;">' + data_kebijakan_covid.desc_D6 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0" style="border-top-left-radius: 0;">Ketersediaan Kantin Sehat</td>' +
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0">' + data_kebijakan_covid.D6 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0" style="border-top-right-radius: 0;">' + data_kebijakan_covid.desc_D6 + '</td>' + 
             '</tr>' +
             '</table>'
         );
@@ -776,7 +776,7 @@
 <script>
     function format_data_covid(data_covid){
         return (
-            '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
+            '<table cellpadding="5" cellspacing="0" border="0" style="padding-left: 50px;  style="width: 100%;"">' +
             '<tr>' + 
                 '<th class="text-left align-top whitespace-pre-line bg-zinc-300" style="border-bottom-left-radius: 0;">Variabel</th>' +
                 '<th class="text-left align-top whitespace-pre-line bg-zinc-300">Data</th>' +  
@@ -793,9 +793,9 @@
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_covid.desc_E2 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-left-radius: 0;">Pemusatan Covid-19 pada Kelas Tertentu</td>' + 
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_covid.E3 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-right-radius: 0;">' + data_covid.desc_E3 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0" style="border-top-left-radius: 0;">Pemusatan Covid-19 pada Kelas Tertentu</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0">' + data_covid.E3 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0" style="border-top-right-radius: 0;">' + data_covid.desc_E3 + '</td>' + 
             '</tr>' +
             '</table>'
         );

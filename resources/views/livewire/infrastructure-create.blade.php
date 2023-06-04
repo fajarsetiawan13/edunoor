@@ -56,42 +56,42 @@
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">1. {{ $question[0]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="A1" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_A1" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_A1" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">2. {{ $question[1]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="A2" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_A2" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_A2" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">3. {{ $question[2]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="A3" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_A3" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_A3" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">4. {{ $question[3]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="A4" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_A4" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_A4" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">5. {{ $question[4]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="A5" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_A5" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_A5" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
             </div>
         </div>
@@ -106,26 +106,26 @@
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">1. {{ $question[5]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="B1" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_B1" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_B1" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">2. {{ $question[6]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="B2" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_B2" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_B2" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">3. {{ $question[7]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="B3" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_B3" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_B3" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
             </div>
         </div>
@@ -140,10 +140,10 @@
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">1. {{ $question[8]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="C1" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_C1" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_C1" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">2. {{ $question[9]->question }}</span>
@@ -155,115 +155,73 @@
                         <input type="radio" wire:model="C2" value="Tidak Baik" class="radio"/>
                         <span class="label-text ml-3">Tidak Baik</span> 
                     </label>
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_C2" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_C2" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">3. {{ $question[10]->question }}</span>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C3" value="Ya" class="radio" />
-                        <span class="label-text ml-3">Ya</span> 
-                    </label>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C3" value="Tidak" class="radio" />
-                        <span class="label-text ml-3">Tidak</span> 
-                    </label>
-                    {{-- <label class="label">
+                    <input type="text" placeholder="Ketik disini" wire:model="C3" class="input input-bordered w-full" />
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_C3" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_C3" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">4. {{ $question[11]->question }}</span>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C4" value="Ya" class="radio" />
-                        <span class="label-text ml-3">Ya</span> 
-                    </label>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C4" value="Tidak" class="radio" />
-                        <span class="label-text ml-3">Tidak</span> 
-                    </label>
-                    {{-- <label class="label">
+                    <input type="text" placeholder="Ketik disini" wire:model="C4" class="input input-bordered w-full" />
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_C4" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_C4" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">5. {{ $question[12]->question }}</span>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C5" value="Ya" class="radio" />
-                        <span class="label-text ml-3">Ya</span> 
-                    </label>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C5" value="Tidak" class="radio" />
-                        <span class="label-text ml-3">Tidak</span> 
-                    </label>
-                    {{-- <label class="label">
+                    <input type="text" placeholder="Ketik disini" wire:model="C5" class="input input-bordered w-full" />
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_C5" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_C5" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">6. {{ $question[13]->question }}</span>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C6" value="Ya" class="radio" />
-                        <span class="label-text ml-3">Ya</span> 
-                    </label>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C6" value="Tidak" class="radio" />
-                        <span class="label-text ml-3">Tidak</span> 
-                    </label>
-                    {{-- <label class="label">
+                    <input type="text" placeholder="Ketik disini" wire:model="C6" class="input input-bordered w-full" />
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_C6" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_C6" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">7. {{ $question[14]->question }}</span>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C7" value="Ya" class="radio" />
-                        <span class="label-text ml-3">Ya</span> 
-                    </label>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C7" value="Tidak" class="radio" />
-                        <span class="label-text ml-3">Tidak</span> 
-                    </label>
-                    {{-- <label class="label">
+                    <input type="text" placeholder="Ketik disini" wire:model="C7" class="input input-bordered w-full" />
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_C7" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_C7" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">8. {{ $question[15]->question }}</span>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C8" value="Ya" class="radio" />
-                        <span class="label-text ml-3">Ya</span> 
-                    </label>
-                    <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C8" value="Tidak" class="radio" />
-                        <span class="label-text ml-3">Tidak</span> 
-                    </label>
-                    {{-- <label class="label">
+                    <input type="text" placeholder="Ketik disini" wire:model="C8" class="input input-bordered w-full" />
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_C8" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_C8" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">9. {{ $question[16]->question }}</span>
                     <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C9" value="Ya" class="radio" />
-                        <span class="label-text ml-3">Ya</span> 
+                        <input type="radio" wire:model="C9" value="Baik" class="radio" />
+                        <span class="label-text ml-3">Baik</span> 
                     </label>
                     <label class="label justify-start cursor-pointer">
-                        <input type="radio" wire:model="C9" value="Tidak" class="radio" />
-                        <span class="label-text ml-3">Tidak</span> 
+                        <input type="radio" wire:model="C9" value="Tidak Baik" class="radio" />
+                        <span class="label-text ml-3">Tidak Baik</span> 
                     </label>
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_C9" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_C9" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
             </div>
         </div>
@@ -285,10 +243,10 @@
                         <input type="radio" wire:model="D1" value="Tidak" class="radio" />
                         <span class="label-text ml-3">Tidak</span> 
                     </label>
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_D1" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_D1" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">2. {{ $question[18]->question }}</span>
@@ -300,10 +258,10 @@
                         <input type="radio" wire:model="D2" value="Tidak" class="radio" />
                         <span class="label-text ml-3">Tidak</span> 
                     </label>
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_D2" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_D2" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">3. {{ $question[19]->question }}</span>
@@ -315,10 +273,10 @@
                         <input type="radio" wire:model="D3" value="Tidak" class="radio" />
                         <span class="label-text ml-3">Tidak</span> 
                     </label>
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_D3" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_D3" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">4. {{ $question[20]->question }}</span>
@@ -330,10 +288,10 @@
                         <input type="radio" wire:model="D4" value="Tidak" class="radio" />
                         <span class="label-text ml-3">Tidak</span> 
                     </label>
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_D4" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_D4" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">5. {{ $question[21]->question }}</span>
@@ -345,10 +303,10 @@
                         <input type="radio" wire:model="D5" value="Tidak" class="radio" />
                         <span class="label-text ml-3">Tidak</span> 
                     </label>
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_D5" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_D5" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">6. {{ $question[22]->question }}</span>
@@ -360,10 +318,10 @@
                         <input type="radio" wire:model="D6" value="Tidak" class="radio" />
                         <span class="label-text ml-3">Tidak</span> 
                     </label>
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_D6" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_D6" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
             </div>
         </div>
@@ -378,26 +336,26 @@
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">1. {{ $question[23]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="E1" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_E1" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_E1" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">2. {{ $question[24]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="E2" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_E2" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_E2" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">3. {{ $question[25]->question }}</span>
                     <input type="text" placeholder="Ketik disini" wire:model="E3" class="input input-bordered w-full" />
-                    {{-- <label class="label">
+                    <label class="label">
                         <span class="label-text">Keterangan</span>
                     </label>
-                    <textarea class="textarea textarea-bordered" wire:model="explanation_E3" placeholder="Tambahkan keterangan jika diperlukan"></textarea> --}}
+                    <textarea class="textarea textarea-bordered" wire:model="explanation_E3" placeholder="Tambahkan keterangan jika diperlukan"></textarea>
                 </div>
                 <div class="form-control w-full mb-3">
                     <span class="font-bold mb-2">4. {{ $question[26]->question }}</span>

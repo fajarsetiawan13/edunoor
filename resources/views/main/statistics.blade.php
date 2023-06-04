@@ -472,7 +472,7 @@
                 '<th class="text-left align-top whitespace-pre-line bg-zinc-300" style="border-bottom-left-radius: 0;">Variabel</th>' +
                 '<th class="text-left align-top whitespace-pre-line bg-zinc-300">Data</th>' + 
                 '<th class="text-left align-top whitespace-pre-line bg-zinc-300">Indikator</th>' + 
-                '<th class="text-left align-top whitespace-pre-line bg-zinc-300"style="border-bottom-right-radius: 0;">Keterangan</th>' + 
+                '<th class="text-left align-top whitespace-pre-line bg-zinc-300" style="border-bottom-right-radius: 0;">Jumlah - Keterangan Data</th>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Jumlah Toilet :</td>' +
@@ -536,7 +536,7 @@
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-left-radius: 0;">Ketaatan Penggunaan Masker:</td>' +
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100"></td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_sanitasi.C9 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" border-b-0 style="border-top-right-radius: 0;">' + data_sanitasi.desc_C9 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-right-radius: 0;">' + data_sanitasi.desc_C9 + '</td>' + 
             '</tr>' +
             '</table>'
         );
@@ -641,39 +641,39 @@
         return (
             '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
             '<tr>' + 
-                '<th class="text-left align-top whitespace-pre-line">Variabel</th>' +
-                '<th class="text-left align-top whitespace-pre-line">Data</th>' +  
-                '<th class="text-left align-top whitespace-pre-line">Keterangan</th>' + 
+                '<th class="text-left align-top whitespace-pre-line bg-zinc-300" style="border-bottom-left-radius: 0;">Variabel</th>' +
+                '<th class="text-left align-top whitespace-pre-line bg-zinc-300">Data</th>' +  
+                '<th class="text-left align-top whitespace-pre-line bg-zinc-300" style="border-bottom-right-radius: 0;">Jumlah - Keterangan Data</th>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Satgas Covid-19</td>' + 
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D1 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D1 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersediaan Satgas Covid-19</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_kebijakan_covid.D1 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_kebijakan_covid.desc_D1 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line">Sosialisasi Protokol Kesehatan</td>' + 
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D2 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D2 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Sosialisasi Protokol Kesehatan</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_kebijakan_covid.D2 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;>' + data_kebijakan_covid.desc_D2 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Prosedur Penanganan Covid-19</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D3 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D3 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersediaan Prosedur Penanganan Covid-19</td>' +
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_kebijakan_covid.D3 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_kebijakan_covid.desc_D3 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Media Informasi Covid-19</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D4 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D4 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersediaan Media Informasi Covid-19</td>' +
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_kebijakan_covid.D4 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_kebijakan_covid.desc_D4 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Peraturan/Tata Tertib Covid-19</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D5 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D5 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersediaan Peraturan/Tata Tertib Covid-19</td>' +
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_kebijakan_covid.D5 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_kebijakan_covid.desc_D5 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line">Ketersediaan Kantin Sehat</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.D6 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line">' + data_kebijakan_covid.desc_D6 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-left-radius: 0;">Ketersediaan Kantin Sehat</td>' +
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_kebijakan_covid.D6 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-right-radius: 0;">' + data_kebijakan_covid.desc_D6 + '</td>' + 
             '</tr>' +
             '</table>'
         );
@@ -778,24 +778,24 @@
         return (
             '<table cellpadding="5" cellspacing="0" border="0" style="padding-left:50px;">' +
             '<tr>' + 
-                '<th class="text-left align-top whitespace-pre-line">Variabel</th>' +
-                '<th class="text-left align-top whitespace-pre-line">Data</th>' +  
-                '<th class="text-left align-top whitespace-pre-line">Keterangan</th>' + 
+                '<th class="text-left align-top whitespace-pre-line bg-zinc-300" style="border-bottom-left-radius: 0;">Variabel</th>' +
+                '<th class="text-left align-top whitespace-pre-line bg-zinc-300">Data</th>' +  
+                '<th class="text-left align-top whitespace-pre-line bg-zinc-300" style="border-bottom-right-radius: 0;">Jumlah - Keterangan Data</th>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line">Data Covid-19 Setahun Terakhir</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + data_covid.E1 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line">' + data_covid.desc_E1 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Data Covid-19 Setahun Terakhir</td>' +
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_covid.E1 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_covid.desc_E1 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line">Jumlah dan Sebaran Kasus per Bulan</td>' +
-                '<td class="text-left align-top whitespace-pre-line">' + data_covid.E2 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line">' + data_covid.desc_E2 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Jumlah dan Sebaran Kasus per Bulan</td>' +
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_covid.E2 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_covid.desc_E2 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line">Pemusatan Covid-19 pada Kelas Tertentu</td>' + 
-                '<td class="text-left align-top whitespace-pre-line">' + data_covid.E3 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line">' + data_covid.desc_E3 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-left-radius: 0;">Pemusatan Covid-19 pada Kelas Tertentu</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_covid.E3 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-top-right-radius: 0;">' + data_covid.desc_E3 + '</td>' + 
             '</tr>' +
             '</table>'
         );

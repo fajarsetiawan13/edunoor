@@ -35,9 +35,9 @@
         <tbody>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">No</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">Pernyataan</td>
-                <td class="w-[15%] text-left align-middle whitespace-pre-line">Jawaban</td>
-                <td class="w-[50%] text-left align-middle whitespace-pre-line">Keterangan</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">Variabel</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">Data</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">Jumlah - Keterangan Data</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">1.</td>
@@ -76,9 +76,9 @@
         <tbody>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">No</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">Pernyataan</td>
-                <td class="w-[15%] text-left align-middle whitespace-pre-line">Jawaban</td>
-                <td class="w-[50%] text-left align-middle whitespace-pre-line">Keterangan</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">Variabel</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">Data</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">Jumlah - Keterangan Data</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">1.</td>
@@ -105,9 +105,9 @@
         <tbody>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">No</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">Pernyataan</td>
-                <td class="w-[15%] text-left align-middle whitespace-pre-line">Jawaban</td>
-                <td class="w-[50%] text-left align-middle whitespace-pre-line">Keterangan</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">Variabel</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">Data</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">Jumlah - Keterangan Data</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">1.</td>
@@ -170,9 +170,9 @@
         <tbody>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">No</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">Pernyataan</td>
-                <td class="w-[15%] text-left align-middle whitespace-pre-line">Jawaban</td>
-                <td class="w-[50%] text-left align-middle whitespace-pre-line">Keterangan</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">Variabel</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">Data</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">Jumlah - Keterangan Data</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">1.</td>
@@ -217,9 +217,9 @@
         <tbody>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">No</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">Pernyataan</td>
-                <td class="w-[15%] text-left align-middle whitespace-pre-line">Jawaban</td>
-                <td class="w-[50%] text-left align-middle whitespace-pre-line">Keterangan</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">Variabel</td>
+                <td class="w-[15%] text-left align-middle whitespace-pre-line">Data</td>
+                <td class="w-[50%] text-left align-middle whitespace-pre-line">Jumlah - Keterangan Data</td>
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">1.</td>

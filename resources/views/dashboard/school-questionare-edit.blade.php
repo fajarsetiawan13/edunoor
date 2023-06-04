@@ -66,41 +66,41 @@
                                 <span class="font-bold mb-2">1. {{ $question[0]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="A1" value="{{ $infrastructure[0]->A1 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_A1" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_A1 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_A1" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_A1 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">2. {{ $question[1]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="A2" value="{{ $infrastructure[0]->A2 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_A2" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_A2 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_A2" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_A2 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">3. {{ $question[2]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="A3" value="{{ $infrastructure[0]->A3 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_A3" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_A3 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_A3" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_A3 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">4. {{ $question[3]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="A4" value="{{ $infrastructure[0]->A4 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_A4" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_A4 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_A4" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_A4 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">5. {{ $question[4]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="A5" value="{{ $infrastructure[0]->A5 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_A5" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_A5 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_A5" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_A5 }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -114,25 +114,25 @@
                                 <span class="font-bold mb-2">1. {{ $question[5]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="B1" value="{{ $infrastructure[0]->B1 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_B1" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_B1 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_B1" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_B1 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">2. {{ $question[6]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="B2" value="{{ $infrastructure[0]->B2 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_B2" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_B2 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_B2" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_B2 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">3. {{ $question[7]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="B3" value="{{ $infrastructure[0]->B3 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_B3" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_B3 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_B3" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_B3 }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -146,9 +146,9 @@
                                 <span class="font-bold mb-2">1. {{ $question[8]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="C1" value="{{ $infrastructure[0]->C1 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_C1" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_C1 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_C1" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_C1 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">2. {{ $question[9]->question }}</span>
@@ -161,57 +161,57 @@
                                     <span class="label-text ml-3">Tidak Baik</span> 
                                 </label>
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_C2" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_C2 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_C2" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_C2 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">3. {{ $question[10]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="C3" value="{{ $infrastructure[0]->C3 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_C3" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_C3 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_C3" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_C3 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">4. {{ $question[11]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="C4" value="{{ $infrastructure[0]->C4 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_C4" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_C4 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_C4" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_C4 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">5. {{ $question[12]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="C5" value="{{ $infrastructure[0]->C5 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_C5" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_C5 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_C5" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_C5 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">6. {{ $question[13]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="C6" value="{{ $infrastructure[0]->C6 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_C6" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_C6 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_C6" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_C6 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">7. {{ $question[14]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="C7" value="{{ $infrastructure[0]->C7 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_C7" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_C7 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_C7" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_C7 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">8. {{ $question[15]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="C8" value="{{ $infrastructure[0]->C8 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_C8" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_C8 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_C8" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_C8 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">9. {{ $question[16]->question }}</span>
@@ -224,9 +224,9 @@
                                     <span class="label-text ml-3">Tidak</span> 
                                 </label>
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_C9" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_C9 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_C9" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_C9 }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -247,9 +247,9 @@
                                     <span class="label-text ml-3">Tidak</span> 
                                 </label>
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_D1" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_D1 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_D1" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_D1 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">2. {{ $question[18]->question }}</span>
@@ -262,9 +262,9 @@
                                     <span class="label-text ml-3">Tidak</span> 
                                 </label>
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_D2" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_D2 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_D2" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_D2 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">3. {{ $question[19]->question }}</span>
@@ -277,9 +277,9 @@
                                     <span class="label-text ml-3">Tidak</span> 
                                 </label>
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_D3" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_D3 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_D3" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_D3 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">4. {{ $question[20]->question }}</span>
@@ -292,9 +292,9 @@
                                     <span class="label-text ml-3">Tidak</span> 
                                 </label>
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_D4" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_D4 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_D4" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_D4 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">5. {{ $question[21]->question }}</span>
@@ -307,9 +307,9 @@
                                     <span class="label-text ml-3">Tidak</span> 
                                 </label>
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_D5" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_D5 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_D5" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_D5 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">6. {{ $question[22]->question }}</span>
@@ -322,9 +322,9 @@
                                     <span class="label-text ml-3">Tidak</span> 
                                 </label>
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_D6" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_D6 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_D6" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_D6 }}</textarea>
                             </div>
                         </div>
                     </div>
@@ -338,29 +338,29 @@
                                 <span class="font-bold mb-2">1. {{ $question[23]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="E1" value="{{ $infrastructure[0]->E1 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_E1" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_E1 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_E1" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_E1 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">2. {{ $question[24]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="E2" value="{{ $infrastructure[0]->E2 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_E2" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_E2 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_E2" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_E2 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">3. {{ $question[25]->question }}</span>
                                 <input type="text" placeholder="Ketik disini" name="E3" value="{{ $infrastructure[0]->E3 }}" class="input input-bordered w-full" />
                                 <label class="label">
-                                    <span class="label-text">Keterangan</span>
+                                    <span class="label-text">Jumlah - Keterangan Data</span>
                                 </label>
-                                <textarea class="textarea textarea-bordered" name="explanation_E3" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->explanation_E3 }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="explanation_E3" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->explanation_E3 }}</textarea>
                             </div>
                             <div class="form-control w-full mb-3">
                                 <span class="font-bold mb-2">4. {{ $question[26]->question }}</span>
-                                <textarea class="textarea textarea-bordered" name="notes" placeholder="Tambahkan keterangan jika diperlukan">{{ $infrastructure[0]->notes }}</textarea>
+                                <textarea class="textarea textarea-bordered" name="notes" placeholder="Tambahkan Jumlah - Keterangan Data jika diperlukan">{{ $infrastructure[0]->notes }}</textarea>
                             </div>
                         </div>
                     </div>

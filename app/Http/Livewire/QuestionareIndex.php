@@ -31,8 +31,8 @@ class QuestionareIndex extends Component
         // dd(Infrastructure::with('school.qr')->get());
         return view('livewire.questionare-index', [
             'questionnaire' => $this->search === null ?
-                Infrastructure::OrderBy('date_created')->OrWhere('school_bp', 'like', '%' . $this->filter)->paginate($this->paginate) :
-                Infrastructure::OrderBy('date_created')->OrWhere('school_bp', 'like', '%' . $this->filter)->where('school_id', 'like', '%' . $this->search . '%')->paginate($this->paginate)
+                Infrastructure::OrderBy('created_at')->OrWhere('school_bp', 'like', '%' . $this->filter)->paginate($this->paginate) :
+                Infrastructure::OrderBy('created_at')->OrWhere('school_bp', 'like', '%' . $this->filter)->where('school_id', 'like', '%' . $this->search . '%')->paginate($this->paginate)
         ]);
     }
 

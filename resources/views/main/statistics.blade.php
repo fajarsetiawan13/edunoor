@@ -116,9 +116,9 @@
                             <tr class="hover">
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $smp->school }}</td>
-                                <td>{{ $sd->B1 }}</td>
-                                <td>{{ $sd->B2 }}</td>
-                                <td>{{ $sd->B3 }}</td>
+                                <td>{{ $smp->B1 }}</td>
+                                <td>{{ $smp->B2 }}</td>
+                                <td>{{ $smp->B3 }}</td>
                             </tr>
                             @endforeach
                           </tbody>
@@ -141,9 +141,9 @@
                             <tr class="hover">
                                 <td>{{ $loop->iteration }}</td>
                                 <td>{{ $sma->school }}</td>
-                                <td>{{ $sd->B1 }}</td>
-                                <td>{{ $sd->B2 }}</td>
-                                <td>{{ $sd->B3 }}</td>
+                                <td>{{ $sma->B1 }}</td>
+                                <td>{{ $sma->B2 }}</td>
+                                <td>{{ $sma->B3 }}</td>
                             </tr>
                             @endforeach
                           </tbody>
@@ -475,68 +475,80 @@
                 '<th class="text-left align-top whitespace-pre-line bg-zinc-300" style="border-bottom-right-radius: 0;">Jumlah - Keterangan Data</th>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Jumlah Toilet :</td>' +
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_sanitasi.C1 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Jumlah Total Toilet</td>' +
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + ((data_sanitasi.C1 * 1) + (data_sanitasi.C2 * 1)) + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100"></td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;"></td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Toilet Laki-laki</td>' +
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + ((data_sanitasi.C1 / data_sanitasi.B3) * 100).toFixed(2) + '%</td>' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100"></td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C1 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersedian Air di Toilet:</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Toilet Perempuan</td>' +
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + ((data_sanitasi.C2 / data_sanitasi.B4) * 100).toFixed(2) + '%</td>' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100"></td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_sanitasi.C2 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C2 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersedian Air di Toilet:</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100"></td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_sanitasi.C3 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C3 + '</td>' + 
+            '</tr>' +
+            '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersediaan Sabun Cuci Tangan di Depan Kelas:</td>' +
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + (data_sanitasi.C3 / data_sanitasi.A3).toFixed(2) + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + (data_sanitasi.C4 / data_sanitasi.A3).toFixed(2) + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + 
-                    ((data_sanitasi.C3 / data_sanitasi.A3) >= 1 ? 'Baik' : 'Tidak Baik') + 
+                    ((data_sanitasi.C4 / data_sanitasi.A3) >= 1 ? 'Baik' : 'Tidak Baik') + 
                 '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C3 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Disinfektan Toilet:</td>' +
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_sanitasi.C4 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_sanitasi.C5 + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + 
-                    (data_sanitasi.C4 > 0 ? 'Baik' : 'Tidak Baik') + 
+                    (data_sanitasi.C5 > 0 ? 'Baik' : 'Tidak Baik') + 
                 '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C4 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C5 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersediaan Tempat Cuci Tangan di Depan Kelas:</td>' +
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + (data_sanitasi.C5 / data_sanitasi.A3).toFixed(2) + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + (data_sanitasi.C6 / data_sanitasi.A3).toFixed(2) + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + 
-                    ((data_sanitasi.C5 / data_sanitasi.A3) >= 1 ? 'Baik' : 'Tidak Baik') + 
+                    ((data_sanitasi.C6 / data_sanitasi.A3) >= 1 ? 'Baik' : 'Tidak Baik') + 
                 '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C5 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersediaan Handsanitizer:</td>' +
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + (data_sanitasi.C6 / data_sanitasi.A3).toFixed(2) + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + (data_sanitasi.C7 / data_sanitasi.A3).toFixed(2) + '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + 
-                    ((data_sanitasi.C6 / data_sanitasi.A3) >= 1 ? 'Baik' : 'Tidak Baik') + 
+                    ((data_sanitasi.C7 / data_sanitasi.A3) >= 1 ? 'Baik' : 'Tidak Baik') + 
                 '</td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C6 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersediaan Thermogun:</td>' +
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_sanitasi.C7 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + (data_sanitasi.C7 >= 1 ? 'Baik' : 'Tidak Baik') + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C7 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_sanitasi.C8 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + (data_sanitasi.C8 >= 1 ? 'Baik' : 'Tidak Baik') + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C8 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Ketersediaan Masker:</td>' +
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + ((data_sanitasi.C8 / data_sanitasi.B2) * 100).toFixed(2) + ' % </td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + ((data_sanitasi.C9 / data_sanitasi.B2) * 100).toFixed(2) + ' % </td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + 
-                    (((data_sanitasi.C8 / data_sanitasi.B2) * 100) >= 50 ? 'Baik' : 'Tidak Baik')+ 
+                    (((data_sanitasi.C9 / data_sanitasi.B2) * 100) >= 50 ? 'Baik' : 'Tidak Baik')+ 
                 '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C8 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_sanitasi.desc_C9 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0" style="border-top-left-radius: 0;">Ketaatan Penggunaan Masker:</td>' +
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0"></td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0">' + data_sanitasi.C9 + '</td>' +  
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0" style="border-top-right-radius: 0;">' + data_sanitasi.desc_C9 + '</td>' + 
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0">' + data_sanitasi.C10 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100 border-0" style="border-top-right-radius: 0;">' + data_sanitasi.desc_C10 + '</td>' + 
             '</tr>' +
             '</table>'
         );
@@ -784,12 +796,12 @@
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Data Covid-19 Setahun Terakhir</td>' +
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_covid.E1 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + ((data_covid.E1 / data_covid.B2) * 100).toFixed(2) + '%</td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_covid.desc_E1 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">Jumlah dan Sebaran Kasus per Bulan</td>' +
-                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + data_covid.E2 + '</td>' +  
+                '<td class="text-left align-top whitespace-pre-line bg-zinc-100">' + ((data_covid.E2 / data_covid.B2) * 100).toFixed(2) + '%</td>' +  
                 '<td class="text-left align-top whitespace-pre-line bg-zinc-100" style="border-radius: 0;">' + data_covid.desc_E2 + '</td>' + 
             '</tr>' +
             '<tr class="hover">' + 

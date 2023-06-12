@@ -18,7 +18,6 @@ class CreateInfrastructuresTable extends Migration
             $table->foreignId('school_id');
             $table->text('school_address');
             $table->string('school_bp');
-            $table->timestamp('date_created');
             $table->string('A1')->nullable();
             $table->string('A2')->nullable();
             $table->string('A3')->nullable();
@@ -27,6 +26,8 @@ class CreateInfrastructuresTable extends Migration
             $table->string('B1')->nullable();
             $table->string('B2')->nullable();
             $table->string('B3')->nullable();
+            $table->string('B4')->nullable();
+            $table->string('B5')->nullable();
             $table->string('C1')->nullable();
             $table->string('C2')->nullable();
             $table->string('C3')->nullable();
@@ -36,6 +37,7 @@ class CreateInfrastructuresTable extends Migration
             $table->string('C7')->nullable();
             $table->string('C8')->nullable();
             $table->string('C9')->nullable();
+            $table->string('C10')->nullable();
             $table->string('D1')->nullable();
             $table->string('D2')->nullable();
             $table->string('D3')->nullable();
@@ -53,6 +55,8 @@ class CreateInfrastructuresTable extends Migration
             $table->text('explanation_B1')->nullable();
             $table->text('explanation_B2')->nullable();
             $table->text('explanation_B3')->nullable();
+            $table->text('explanation_B4')->nullable();
+            $table->text('explanation_B5')->nullable();
             $table->text('explanation_C1')->nullable();
             $table->text('explanation_C2')->nullable();
             $table->text('explanation_C3')->nullable();
@@ -62,6 +66,7 @@ class CreateInfrastructuresTable extends Migration
             $table->text('explanation_C7')->nullable();
             $table->text('explanation_C8')->nullable();
             $table->text('explanation_C9')->nullable();
+            $table->text('explanation_C10')->nullable();
             $table->text('explanation_D1')->nullable();
             $table->text('explanation_D2')->nullable();
             $table->text('explanation_D3')->nullable();

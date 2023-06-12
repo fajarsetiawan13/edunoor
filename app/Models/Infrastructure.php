@@ -220,6 +220,8 @@ class Infrastructure extends Model
                 'infrastructures.B1 as B1',
                 'infrastructures.B2 as B2',
                 'infrastructures.B3 as B3',
+                'infrastructures.B4 as B4',
+                'infrastructures.B5 as B5',
                 'infrastructures.C1 as C1',
                 'infrastructures.C2 as C2',
                 'infrastructures.C3 as C3',
@@ -229,6 +231,7 @@ class Infrastructure extends Model
                 'infrastructures.C7 as C7',
                 'infrastructures.C8 as C8',
                 'infrastructures.C9 as C9',
+                'infrastructures.C10 as C10',
                 'infrastructures.D1 as D1',
                 'infrastructures.D2 as D2',
                 'infrastructures.D3 as D3',
@@ -246,6 +249,8 @@ class Infrastructure extends Model
                 'infrastructures.explanation_B1 as desc_B1',
                 'infrastructures.explanation_B2 as desc_B2',
                 'infrastructures.explanation_B3 as desc_B3',
+                'infrastructures.explanation_B4 as desc_B4',
+                'infrastructures.explanation_B5 as desc_B5',
                 'infrastructures.explanation_C1 as desc_C1',
                 'infrastructures.explanation_C2 as desc_C2',
                 'infrastructures.explanation_C3 as desc_C3',
@@ -255,6 +260,7 @@ class Infrastructure extends Model
                 'infrastructures.explanation_C7 as desc_C7',
                 'infrastructures.explanation_C8 as desc_C8',
                 'infrastructures.explanation_C9 as desc_C9',
+                'infrastructures.explanation_C10 as desc_C10',
                 'infrastructures.explanation_D1 as desc_D1',
                 'infrastructures.explanation_D2 as desc_D2',
                 'infrastructures.explanation_D3 as desc_D3',
@@ -264,6 +270,7 @@ class Infrastructure extends Model
                 'infrastructures.explanation_E1 as desc_E1',
                 'infrastructures.explanation_E2 as desc_E2',
                 'infrastructures.explanation_E3 as desc_E3',
+                'infrastructures.notes as notes'
             )
             ->where('infrastructures.school_bp', '=', 'SD')
             ->join('schools', 'schools.id', '=', 'infrastructures.school_id');
@@ -285,6 +292,8 @@ class Infrastructure extends Model
                 'infrastructures.B1 as B1',
                 'infrastructures.B2 as B2',
                 'infrastructures.B3 as B3',
+                'infrastructures.B4 as B4',
+                'infrastructures.B5 as B5',
                 'infrastructures.C1 as C1',
                 'infrastructures.C2 as C2',
                 'infrastructures.C3 as C3',
@@ -294,6 +303,7 @@ class Infrastructure extends Model
                 'infrastructures.C7 as C7',
                 'infrastructures.C8 as C8',
                 'infrastructures.C9 as C9',
+                'infrastructures.C10 as C10',
                 'infrastructures.D1 as D1',
                 'infrastructures.D2 as D2',
                 'infrastructures.D3 as D3',
@@ -311,6 +321,8 @@ class Infrastructure extends Model
                 'infrastructures.explanation_B1 as desc_B1',
                 'infrastructures.explanation_B2 as desc_B2',
                 'infrastructures.explanation_B3 as desc_B3',
+                'infrastructures.explanation_B4 as desc_B4',
+                'infrastructures.explanation_B5 as desc_B5',
                 'infrastructures.explanation_C1 as desc_C1',
                 'infrastructures.explanation_C2 as desc_C2',
                 'infrastructures.explanation_C3 as desc_C3',
@@ -320,6 +332,7 @@ class Infrastructure extends Model
                 'infrastructures.explanation_C7 as desc_C7',
                 'infrastructures.explanation_C8 as desc_C8',
                 'infrastructures.explanation_C9 as desc_C9',
+                'infrastructures.explanation_C10 as desc_C10',
                 'infrastructures.explanation_D1 as desc_D1',
                 'infrastructures.explanation_D2 as desc_D2',
                 'infrastructures.explanation_D3 as desc_D3',
@@ -329,6 +342,7 @@ class Infrastructure extends Model
                 'infrastructures.explanation_E1 as desc_E1',
                 'infrastructures.explanation_E2 as desc_E2',
                 'infrastructures.explanation_E3 as desc_E3',
+                'infrastructures.notes as notes'
             )
             ->where('infrastructures.school_bp', '=', 'SMP')
             ->join('schools', 'schools.id', '=', 'infrastructures.school_id');
@@ -350,6 +364,8 @@ class Infrastructure extends Model
                 'infrastructures.B1 as B1',
                 'infrastructures.B2 as B2',
                 'infrastructures.B3 as B3',
+                'infrastructures.B4 as B4',
+                'infrastructures.B5 as B5',
                 'infrastructures.C1 as C1',
                 'infrastructures.C2 as C2',
                 'infrastructures.C3 as C3',
@@ -359,6 +375,7 @@ class Infrastructure extends Model
                 'infrastructures.C7 as C7',
                 'infrastructures.C8 as C8',
                 'infrastructures.C9 as C9',
+                'infrastructures.C10 as C10',
                 'infrastructures.D1 as D1',
                 'infrastructures.D2 as D2',
                 'infrastructures.D3 as D3',
@@ -376,6 +393,8 @@ class Infrastructure extends Model
                 'infrastructures.explanation_B1 as desc_B1',
                 'infrastructures.explanation_B2 as desc_B2',
                 'infrastructures.explanation_B3 as desc_B3',
+                'infrastructures.explanation_B4 as desc_B4',
+                'infrastructures.explanation_B5 as desc_B5',
                 'infrastructures.explanation_C1 as desc_C1',
                 'infrastructures.explanation_C2 as desc_C2',
                 'infrastructures.explanation_C3 as desc_C3',
@@ -385,6 +404,7 @@ class Infrastructure extends Model
                 'infrastructures.explanation_C7 as desc_C7',
                 'infrastructures.explanation_C8 as desc_C8',
                 'infrastructures.explanation_C9 as desc_C9',
+                'infrastructures.explanation_C10 as desc_C10',
                 'infrastructures.explanation_D1 as desc_D1',
                 'infrastructures.explanation_D2 as desc_D2',
                 'infrastructures.explanation_D3 as desc_D3',
@@ -394,6 +414,7 @@ class Infrastructure extends Model
                 'infrastructures.explanation_E1 as desc_E1',
                 'infrastructures.explanation_E2 as desc_E2',
                 'infrastructures.explanation_E3 as desc_E3',
+                'infrastructures.notes as notes'
             )
             ->where('infrastructures.school_bp', '=', 'SMA')
             ->join('schools', 'schools.id', '=', 'infrastructures.school_id');

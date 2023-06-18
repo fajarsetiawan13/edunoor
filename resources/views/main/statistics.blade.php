@@ -326,7 +326,7 @@
                     <div class="divider my-0 mx-32"></div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Dasar</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full" id="SDM_Table_SD">
+                        <table class="table table-compact w-full" id="Skor_SD">
                           <thead>
                             <tr>
                               <th>No</th>
@@ -347,7 +347,7 @@
                     </div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Mengegah Pertama</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full" id="SDM_Table_SMP">
+                        <table class="table table-compact w-full" id="Skor_SMP">
                           <thead>
                             <tr>
                               <th>No</th>
@@ -368,7 +368,7 @@
                     </div>
                     <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Menengah Atas</span>
                     <div class="overflow-x-auto">
-                        <table class="table table-compact w-full" id="SDM_Table_SMA">
+                        <table class="table table-compact w-full" id="Skor_SMA">
                           <thead>
                             <tr>
                               <th>No</th>

@@ -7,6 +7,8 @@ use App\Models\Infrastructure;
 use App\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Nette\Utils\Arrays;
+use PhpParser\Node\Expr\Cast\Object_;
 
 class MainController extends Controller
 {
@@ -100,7 +102,11 @@ class MainController extends Controller
             $batas_SMA[$i] = 36;
         }
 
-        // dd(Infrastructure::Basis_Data_SD()->get());
+        $data_sd = MainController::skor_sekolah(Infrastructure::Basis_Data_SD()->get());
+        $data_smp = MainController::skor_sekolah(Infrastructure::Basis_Data_SMP()->get());
+        $data_sma = MainController::skor_sekolah(Infrastructure::Basis_Data_SMA()->get());
+        // dd([$data_sd, $data_smp, $data_sma]);
+
         return view('main.statistics', [
             'title' => 'Statistik Data Kesehatan Sekolah | Sistem Basis Data Sekolah',
             'setting' => Setting::all(),
@@ -128,6 +134,7 @@ class MainController extends Controller
             'labels_kepadatan_populasi_SD' => $labels[18], 'kepadatan_populasi_SD' => $data[18],
             'labels_kepadatan_populasi_SMP' => $labels[19], 'kepadatan_populasi_SMP' => $data[19],
             'labels_kepadatan_populasi_SMA' => $labels[20], 'kepadatan_populasi_SMA' => $data[20],
+            'skor_sd' => $data_sd, 'skor_smp' => $data_smp, 'skor_sma' => $data_sma
         ]);
     }
 
@@ -163,5 +170,129 @@ class MainController extends Controller
         $request->session()->regenerateToken();
 
         return redirect('/');
+    }
+
+    public function skor_sekolah(Object $data)
+    {
+        for ($i = 0; $i < $data->count(); $i++) {
+            $x = 0;
+            // Kepadatan Kelas
+            if ((($data[$i]->B2 / $data[$i]->A3) / $data[$i]->A4) <= 0.1) {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Sabun Cuci Tangan
+            if (($data[$i]->C4 / $data[$i]->A3) >= 1) {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Handsanitizer
+            if (($data[$i]->C7 / $data[$i]->A3) >= 1) {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Tempat Cuci tangan
+            if (($data[$i]->C6 / $data[$i]->A3 >= 1)) {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Thermogun
+            if ($data[$i]->C8 >= 1) {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Ventilasi
+            if ((($data[$i]->A5 / $data[$i]->A4) * 100) >= 10) {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Masker cadangan 
+            if ((($data[$i]->C9 / $data[$i]->B2) * 100) >= 50) {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Kepadatan Populasi sekolah 
+            // if(($data[$i]->B2 / $data[$i]->A1) =){
+            //     $x += 1;
+            // } else {
+            //     $x += 0;
+            // }
+            // Disinfektan Toilet
+            if ($data[$i]->C5 >= 1) {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Jumlah Toilet 
+            if ((($data[$i]->B3 / 40) >= $data[$i]->C1 || ($data[$i]->B4 / 25) >= $data[$i]->C2)) {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Ketersediaan Air di Toilet
+            if ($data[$i]->C3 == 'Baik' || $data[$i]->C3 == 'Ya') {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Ketaatan Penggunaan Masker
+            if ($data[$i]->C10 == 'Baik' || $data[$i]->C10 == 'Ya') {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Ketersediaan Satgas Covid-19
+            if ($data[$i]->D1 == 'Ya') {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Sosialisasi Protokol Kesehatan
+            if ($data[$i]->D2 == 'Ya') {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Ketersediaan Prosedur Penanganan Covid-19
+            if ($data[$i]->D3 == 'Ya') {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Ketersediaan Media Informasi Covid-19
+            if ($data[$i]->D4 == 'Ya') {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Ketersediaan Peraturan/Tata Tertib Covid-19
+            if ($data[$i]->D5 == 'Ya') {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Ketersediaan Kantin Sehat
+            if ($data[$i]->D6 == 'Ya') {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+            // Data Covid-19 Setahun Terakhir
+            if ($data[$i]->E1 < 1) {
+                $x += 1;
+            } else {
+                $x += 0;
+            }
+
+            $skor[$i] = [$data[$i]->school, $x, round((($x / 18) * 100), 2)];
+        }
+        return $skor;
     }
 }

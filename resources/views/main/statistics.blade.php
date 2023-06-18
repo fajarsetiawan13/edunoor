@@ -19,6 +19,7 @@
                     <option id="graph-6" value="6">Data Covid-19</option>
                     <option id="graph-7" value="7">Kepadatan Kelas</option>
                     <option id="graph-8" value="8">Kepadatan Populasi Sekolah</option>
+                    <option id="graph-9" value="9">Skor Sekolah</option>
                 </select>
                 <div class="" id="select-content">
                     <span class="flex justify-center font-semibold text-lg md:text-xl">Masa Pemantauan</span>
@@ -318,6 +319,76 @@
                     </div>
                     <div class="divider my-0"></div>
                 </div>
+
+                {{-- Skor Sekolah --}}
+                <div class="hidden" id="select-content">
+                    <span class="flex justify-center font-semibold text-lg md:text-xl">Sumber Daya Manusia</span>
+                    <div class="divider my-0 mx-32"></div>
+                    <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Dasar</span>
+                    <div class="overflow-x-auto">
+                        <table class="table table-compact w-full" id="SDM_Table_SD">
+                          <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>Nama Sekolah</th>
+                              <th>Indikator</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @foreach($skor_sd as $sd)
+                            <tr class="hover">
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $sd[0] }}</td>
+                                <td>{{ $sd[2] }}%</td>
+                            </tr>
+                            @endforeach
+                          </tbody>
+                        </table>
+                    </div>
+                    <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Mengegah Pertama</span>
+                    <div class="overflow-x-auto">
+                        <table class="table table-compact w-full" id="SDM_Table_SMP">
+                          <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>Nama Sekolah</th>
+                              <th>Indikator</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @foreach($skor_smp as $smp)
+                            <tr class="hover">
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $smp[0] }}</td>
+                                <td>{{ $smp[2] }}%</td>
+                            </tr>
+                            @endforeach
+                          </tbody>
+                        </table>
+                    </div>
+                    <span class="flex justify-start font-semibold text-lg md:text-xl mt-5 mb-3">Sekolah Menengah Atas</span>
+                    <div class="overflow-x-auto">
+                        <table class="table table-compact w-full" id="SDM_Table_SMA">
+                          <thead>
+                            <tr>
+                              <th>No</th>
+                              <th>Nama Sekolah</th>
+                              <th>Indikator</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            @foreach($skor_sma as $sma)
+                            <tr class="hover">
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $sma[0] }}</td>
+                                <td>{{ $sma[2] }}%</td>
+                            </tr>
+                            @endforeach
+                          </tbody>
+                        </table>
+                    </div>
+                    <div class="divider my-0"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -460,6 +531,9 @@
         $('#SDM_Table_SD').DataTable();
         $('#SDM_Table_SMP').DataTable();
         $('#SDM_Table_SMA').DataTable();
+        $('#Skor_SD').DataTable();
+        $('#Skor_SMP').DataTable();
+        $('#Skor_SMA').DataTable();
     } );
 </script>
 

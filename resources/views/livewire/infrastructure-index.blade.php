@@ -147,7 +147,7 @@
             </tr>
             <tr class="hover">
                 <td class="w-[5%] text-left align-middle whitespace-pre-line">3.</td>
-                <td class="w-[30%] text-left align-middle whitespace-pre-line">Ketersediaan Sabun Cuci Tangan di Toilet</td>
+                <td class="w-[30%] text-left align-middle whitespace-pre-line">Ketersediaan Sabun Cuci Tangan di Depan Kelas</td>
                 <td class="w-[15%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->C4 == null) ? '-' : $infrastructure[0]->C4 }}</td>
                 <td class="w-[50%] text-left align-middle whitespace-pre-line">{{ ($infrastructure[0]->explanation_C4 == null) ? '-' : $infrastructure[0]->explanation_C4 }}</td>
             </tr>
